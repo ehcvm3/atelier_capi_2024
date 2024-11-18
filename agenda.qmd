@@ -5,3 +5,67 @@ execute:
   warning: false
 ---
 
+
+```{r}
+#| label: créer les données de l'agenda
+agenda_df <- tibble::tribble(
+  ~ jour, ~ titre, ~ lecon, ~ diapos, ~ exercices,
+  "Jours 3 : mercredi 27 novembre", "Rosters imbriqués", NA, "slides/rosters_imbriques/rosters_imbriques.qmd", NA,
+)
+```
+
+
+```{r}
+#| label: créer le tableau
+
+# load table manipulation function
+source(fs::path(here::here(), "R/schedule.R"))
+
+agenda_df |>
+dplyr::group_by(jour) |>
+gt::gt() |>
+gt::tab_header(
+  title = "Agenda des séances",
+  subtitle = "Avec des liens vers les page de leçon, les diapos, et les exercices"
+) |>
+gt::cols_label(
+  titre = "Séance",
+  lecon = "Leçon",
+  diapos = "Diapos",
+  exercices = "Exercices"
+) |>
+gt::tab_options(
+  heading.background.color = "#202c86",
+  column_labels.background.color = "#202c86",
+  row_group.font.weight = "bolder",
+  row_group.background.color = "#3346d3"
+) |>
+create_icon_w_link(
+  column = lecon,
+  icon_name = "book-open-reader",
+  color_enabled = "#cf4446",
+  color_disabled = "#e9ecef"
+) |>
+create_icon_w_link(
+  column = diapos,
+  icon_name = "person-chalkboard",
+  color_enabled = "#cf4446",
+  color_disabled = "#e9ecef"
+) |>
+create_icon_w_link(
+  column = exercices,
+  icon_name = "laptop-code",
+  color_enabled = "#cf4446",
+  color_disabled = "#e9ecef"
+) |>
+gt::cols_width(
+  lecon ~ gt::px(150),
+  diapos ~ gt::px(150),
+  exercices ~ gt::px(150)
+) |>
+gt::cols_align(
+  columns = c(lecon, diapos, exercices),
+  align = "center"
+)
+
+```

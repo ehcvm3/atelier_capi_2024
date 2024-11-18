@@ -1,0 +1,441 @@
+---
+format: 
+    revealjs: 
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+```{r}
+
+```
+
+# `r fontawesome::fa(name = "table")` > `r fontawesome::fa(name = "table")` > `r fontawesome::fa(name = "table")` Rosters imbriqués {background-color=var(--suso)}
+
+## Plan de la présentation {.suso}
+
+::: {.box .box-1}
+Introduction
+:::
+
+::: {.box .box-2}
+Comment créer
+:::
+
+::: {.box .box-3}
+Comment substituer le texte
+:::
+
+::: {.box .box-4}
+Comment connaître et contourner les limites 
+:::
+
+# Introduction {background-color=var(--s1)}
+
+## Définition {.t1}
+
+Roster qui :
+
+- Résulte de plus d'une séries d'énumération d'éléments
+- Contient les ID de ligne pour chaque série d'éunmération
+
+## Exemple 1 : Champs - parcelles {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/exemple_champs_parcelles.png){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- D'abord, énumérer les champs
+- Ensuite, pour chaque champ, énumérer les parcelles
+
+:::
+
+::::
+
+## Exemple 2 : Champs - parcelles - cultures {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/exemple_champs_parcelles_cultures.png){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Ayant déjà fait l'inventaire des champs et des parcelles ...
+- Faire l'inventaire des cultures par chaque champs et chaque parcelle
+
+:::
+
+::::
+
+## Exemple 3 : Entreprises - main d'oeuvre {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/exemple_entreprise_main_doeuvre.png){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Ayant déjà fait l'inventaire des entreprises et des membres du ménage ...
+- 
+
+:::
+
+::::
+
+# Comment créer {background-color=var(--s2)}
+
+## Comment créer : exemple simple {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/exemple_simple.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Créer un premier roster
+- Créer un second roster au sein du premier roster
+
+:::
+
+::::
+
+## Comment créer : exemple plus réaliste {.t2}
+
+![](assets/exemple_realiste.mp4){fig-align="center"}
+
+## Exercice : créer le roster champs-parcelle-culture {.t2}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](assets/capture_exercice_champs_parcelles_cultures.png){fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+### Instructions
+
+- Télécharger le questionnaire [ici](assets/exercice_champs_parcelles_cultures.xlsx)
+- Créer une section qui contient `S16a_Agri`
+- Créer une section qui contient `S16c_Agri`
+
+### Astuces
+
+- Reproduire la structure de `S16a_Agri` dans `S16c_Agri`
+- Éviter de captent le numéro d'ordre; laisser SuSo faire ce travail
+- Éviter de capter le nom de culture; préférer une question catégorielle
+
+:::
+
+::::
+
+# Comment substituer le texte {background-color=var(--s3)}
+
+## Comment substituer le texte {.t3}
+
+::: {.box .box-3}
+Au sein d'un roster imbriqué
+:::
+
+::: {.box .box-3}
+A travers les niveaux de rosters imbriqués
+:::
+
+## Au sein d'un roster imbriqué {.t3}
+
+![](assets/bonjours_je_mappelle_rostertitle.png){fig-align="center"}
+
+## Au sein d'un roster imbriqué {.t3}
+
+![](assets/subsitution_texte_meme_niveau.mp4){fig-align="center"}
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+![](assets/roster_imbriqu%C3%A9_0.png){fig-align="center"}
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+![](assets/roster_imbriqu%C3%A9_1.png){fig-align="center"}
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+![](assets/roster_imbriqu%C3%A9_2.png){fig-align="center"}
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+![](assets/roster_imbriqu%C3%A9_3.png){fig-align="center"}
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](assets/roster_imbriqu%C3%A9_3.png){fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+### Problématique
+
+- Référencier le titre de la ligne en cours dans le roster parent
+- Si l'on est dans un roster champs-parcelle et dans le niveau parcelle, afficher le nom du champs à la quelle apartient la parcelle en cours
+
+:::
+
+::::
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](assets/roster_imbriqu%C3%A9_3.png){fig-align="center"}
+
+:::
+
+::: {.column width="50%"}
+
+### Ce qui ne marche pas
+
+- Une variable de système qui désigne le rowtitle du parent (e.g. `%parentrostertitle%`). Une telle variable n'existe pas.
+- Une variable qui capte le title de la ligne en cours dans le roster parent. Voir [ici](https://forum.mysurvey.solutions/t/accessing-rostertitle-in-string-variable/700/5).
+
+
+:::
+
+::::
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/substitution_par_nom_de_roster.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+### Vers une solution
+
+Les subsitutions suivantes sont équivalents :
+
+  - `%rostertitle%`
+  - `%nom_variable_du_roster%`
+
+:::
+
+::::
+
+## A travers les niveaux de rosters imbriqués {.t3}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/substitution_par_nom_roster_a_travers_niveaux.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+### La solution
+
+La substitution par nom de roster marche également à travers les niveaux
+
+:::
+
+::::
+
+# Comment connaître et contourner les limites {background-color=var(--s4)}
+
+## Connaître : une recherche ensemble {.t4}
+
+:::: {.columns}
+
+::: {.column width="75%"}
+
+```{r}
+#| eval: true
+#| echo: false
+knitr::include_url(
+  url = "https://docs.mysurvey.solutions/",
+  height = "800px"
+)
+```
+
+:::
+
+::: {.column width="25%"}
+
+- Numéro de lignes dans un roster
+- Niveaux d'imbriquation
+- Nombre d'éléments dans un ensemble de rosters imbriqués
+
+:::
+
+::::
+
+## Contourner : un exemple {.t4}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/qnr_nsu.png){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Identifier les produits au marché
+- Pour ces produits, identifier les unités
+- Pour ces unités, identifier les tailles
+- Capter des infos à plusieurs niveaux:
+  - <details> <summary>Produits</summary>
+    - Unités disponibles et non-disponibles
+  </details>
+  - <details> <summary>Unités</summary>
+    - Quelles tailles
+    - Image des tailles ensemble
+  </details>
+  - <details> <summary>Tailles</summary>
+    - Poids
+    - Prix
+  </details>
+  
+:::
+
+::::
+
+## Contourner : quel design ? {.t4}
+
+:::: {.columns}
+
+::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
+
+### 1 appli, 1 roster
+
+- Limite du nombre de lignes : 200
+- Impossible de capter tous les ~230 produits dans le même roster
+
+:::
+
+::: {.column width="33%" }
+
+::: {.fragment .semi-fade-out fragment-index=2}
+::: {.fragment .fragment fragment-index=1}
+
+### 1 appli par par groupe de produits
+
+- Solution des dernière éditions de l'EHCVM
+- Certes, cela marche
+- Mais rend la mise en oeuvre un peu lourde
+
+:::
+
+:::
+
+:::
+
+::: {.column width="33%" .fragment fragment-index=2}
+
+### 1 appli, 1 roster par groupe de produits
+
+- Proposition de cette édition de l'EHCVM
+- Vérifions si cela peut respecter les limites de Survey Solutions
+
+:::
+
+::::
+
+## Contourner : vérifier le respect des limites {.t4}
+
+::: {.panel-tabset}
+
+### Lignes de roster
+
+Limite : 200 lignes
+
+Vérifions par niveau :
+
+- **Produits :** nombre par groupe de produit largement < 200
+- **Unités :** ~ 40 < 200
+- **Tailles :** ~ 5 < 200
+
+### Niveaux d'imbriquation
+
+Limite pour les rosters : 4 niveaux
+
+Vérifions notre cas :
+
+- Niveau 1 : Produits
+- Niveau 2 : Unités
+- Niveau 3 : Tailles / relevés
+
+### Nombre d'éléments
+
+Limites du nombre d'éléments dans un roster dans un questionnaire : 80 000
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+#### Dimensions
+
+Lignes par niveau : 
+
+- Produits : 230
+- Unités moyennes / produit : 10
+- Tailles moyennes / unité : 4
+
+Objets par niveau :
+
+- Produit : 4
+- Unité : 7
+- Taille : 3
+
+:::
+
+::: {.column width="50%" .fragment}
+
+#### Calcul du nombre
+
+- Niveau produit : (230 * 4) = 920
+- Niveau unité : (230 * 10 * 7) = 16 100
+- Niveau taille : (230 * 10 * 4 * 3) = 27 600
+- Grand total : 44 620 < 80 000
+
+:::
+
+::::
+
+:::
