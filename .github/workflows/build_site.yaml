@@ -59,19 +59,14 @@ jobs:
         run: pak::pak(c("glue", "htmltools", "here", "gt", "purrr", "tibble", "fs", "dplyr", "knitr", "fontawesome", "emoji", "quarto"))
         shell: Rscript {0}
 
-      - name: Remove development .gitignore and restore deployment one
+      - name: Remove development .gitignore and create deployment one
         run: |
           rm .gitignore
           echo "/.quarto/" >> .gitignore
 
-      - name: Build site
-        run: quarto::quarto_render()
-        shell: Rscript {0}
-
-      - name: Deploy to GitHub pages
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+      - name: Render and public to GitHub pages
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          clean: true
-          folder: docs
-          branch: gh-pages
-          target-folder: docs
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
