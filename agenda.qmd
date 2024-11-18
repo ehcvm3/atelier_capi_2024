@@ -1,0 +1,7 @@
+---
+sidebar: false
+execute: 
+  echo: false
+  warning: false
+---
+

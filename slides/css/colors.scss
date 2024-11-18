@@ -1,0 +1,54 @@
+:root {
+  --suso: #1c51b7;
+  --s1: #170C3AFF; 
+  --s2: #500E6CFF; 
+  --s3: #86216BFF; 
+  --s4: #BB3754FF; 
+  --s5: #E65D30FF; 
+  --s6: #FB9507FF;
+  --s7: #F6D645FF;
+  --s8: #F6D645FF;
+  --s9: #F6D645FF;
+}
+
+/*-- scss:rules --*/
+
+// Create title and boxes for sections
+$sections: 
+  "1" "2" "3" "4" "5" "6" "7" "8" "9";
+
+@each $section in $sections {
+  
+  /* Titles */
+  .t#{$section} h2 {
+    background-color: var(--s#{$section});
+  }
+
+  /* Boxes */
+  .box-#{$section} {
+    background-color: var(--s#{$section});
+  }
+
+  /* Colored text */
+  .txt-#{$section} {
+    color: var(--s#{$section});
+  }
+
+}
+
+// SuSo
+.suso h2 {
+  background-color: var(--suso);
+}
+
+.box-s {
+  background-color: var(--suso);
+}
+
+.txt-s {
+  color: var(--suso);
+}
+
+.box-grey {
+  background-color: #c0c0c0;
+}

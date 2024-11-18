@@ -1,0 +1,96 @@
+
+/*-- scss:rules --*/
+
+// header banner box
+.reveal .slides h2 {
+
+  // reduce margin so that spans visible area
+  margin-left: -90px;
+  margin-right: -90px;
+  margin-top: -50px;
+  margin-bottom: 40px;
+
+  // add padding around title box
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 140px;
+
+  // make title font white
+  color: white;
+
+}
+
+/* header coloring */
+
+.title {
+  color: white;
+  text-align: center;
+}
+
+.section h1 {
+  color:white
+}
+
+.focus {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+
+/* boxes */
+
+.box {
+
+  // margin between boxes
+  // defined only for top so that there's no space allocated for the last box in a list
+  margin: 1em auto;
+  // padding around margin content
+  padding: 0.1em 0.4em;
+  font-weight: 600;
+  display: table;
+  text-align: center;
+  color: white;
+
+}
+
+.box h3 {
+  color: white;
+  font-weight: 900 !important;
+}
+
+.t-box h3 {
+  text-align: center;
+  color: white;
+  padding: 0.1em ;
+}
+
+/* Question boxes */ 
+
+.question {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  box-shadow: 10px 5px 5px lightgray;
+  padding-left: 2px;
+  padding-right: 2px;
+  overflow-wrap: break-word;
+}
+
+.big {
+  font-size: 150%;
+}
+
+// .box > details {
+//     color: white !important;
+// }
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* vertical-align: middle; */
+}
+
+.center-h3 h3 {
+  text-align: center;
+}

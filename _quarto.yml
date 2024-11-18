@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+
+  title: "Atelier de renforcement de capacité et d'adaptation CAPI 2024"
+  search: true
+  navbar:
+    right: 
+      - text: "Acceuil"
+        icon: "house-door-fill"
+        file: index.qmd
+      - text: "Pré-requis"
+        icon: "list-check"
+        file: pre-requis/00_survol_des_pre-requis.qmd
+      - text: "Agenda"
+        icon: "calendar-week"
+        file: agenda.qmd
+      - text: "Leçons"
+        icon: "mortarboard"
+      - text: "Exercices"
+        icon: "journal-code"
+      - text: "Ressources"
+
+  sidebar:
+
+  - title: "Pré-requis"
+    search: true
+    style: floating
+    contents:
+      - section: "Survol"
+        contents:
+        - pre-requis/00_survol_des_pre-requis.qmd
+      - section: "Survey Solutions"
+        contents:
+        - pre-requis/01_suso_00_survol.qmd
+        - pre-requis/01_suso_01_compte_designer.qmd
+        - pre-requis/01_suso_02_server.qmd
+        - pre-requis/01_suso_03_connaissances_suso.qmd
+      - section: "Programmes"
+        contents:
+        - pre-requis/02_progs_01_programmes.qmd
+        - pre-requis/02_progs_02_packages.qmd
+      
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

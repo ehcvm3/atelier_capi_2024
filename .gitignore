@@ -1,0 +1,5 @@
+# Quarto content
+/.quarto/
+
+# folder where docs are built locally
+/docs/

@@ -1,0 +1,7 @@
+---
+title: "Programmes à installer"
+---
+
+- R
+- RTools
+- RStudio
