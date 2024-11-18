@@ -65,6 +65,10 @@ jobs:
           rm .gitignore
           echo "/.quarto/" >> .gitignore
 
+      - name: Build site
+        run: quarto::quarto_render()
+        shell: Rscript {0}
+
       - name: Deploy to GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4.6.9
         with:
