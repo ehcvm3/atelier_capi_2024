@@ -64,9 +64,10 @@ jobs:
           rm .gitignore
           echo "/.quarto/" >> .gitignore
 
-      - name: Render and public to GitHub pages
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Deploy to GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4.6.9
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          clean: true
+          folder: docs
+          branch: gh-pages
+          target-folder: docs
