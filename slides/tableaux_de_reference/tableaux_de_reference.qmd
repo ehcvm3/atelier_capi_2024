@@ -1,0 +1,672 @@
+---
+format: 
+    revealjs: 
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+```{r}
+
+```
+
+# `r fontawesome::fa(name = "magnifying-glass")` `r fontawesome::fa(name = "table")` Tableaux de référence {background-color=var(--suso)}
+
+## Plan de la présentation {.suso}
+
+::: {.box .box-1}
+Quoi
+:::
+
+::: {.box .box-2}
+Pourquoi
+:::
+
+::: {.box .box-3}
+Comment
+:::
+
+# Quoi {background-color=var(--s1)}
+
+## Structure {.t1}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Dictionnaire 
+
+Pour les développeurs :
+
+- Une paire de clé et de valeurs
+- Clé : `rowcode`
+- Valeur : groupe de colonnes associées à cette clé
+
+En de termes pratiques, un tableau qui consiste de : 
+
+- `rowcode`, une colonne de chiffres entiers et uniques
+- Une colonne ou plus de type numérique
+
+En, plus, des limites sur les dimensions :
+
+- Max colonnes : 10
+- Max lignes : 15 000
+
+:::
+
+::: {.column width="50%"}
+
+| rowcode | col1 | col2 |
+|---------|------|------|
+| 1       |   1   |  1.5    |
+| 2       |   13   |  15.3    |
+| 3       |   11.5   |  10.75    |
+
+:::
+
+::::
+
+# Pourquoi {background-color=var(--s2)}
+
+## Cas d'emploi 1 : trier les modalités {.t2}
+
+![](assets/trier_unites_tailles.png){fig-align="center"}
+
+## Cas d'emploi 1 : trier les modalités {.t2}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| label: montrer le tableau des produits-unités-tailles
+#| eval: true
+#| echo: false
+
+produits_unites_tailles <- readr::read_tsv("assets/tableau_de_ref_ehcvm3.tab")
+
+reactable::reactable(
+  data = produits_unites_tailles,
+  height = 800
+)
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{.cpp code-line-numbers="1|4,11|3-6|10-14|18-22"}
+/* unités valides pour ce produit */
+
+// si produit existe dans le tableau...
+produits_unites_tailles_valides.Values.Any(x=>
+	x.produit_code == @rowcode
+) 
+
+?
+
+// ...n'afficher que les unités
+produits_unites_tailles_valides.Values.Any(x=>
+	x.produit_code == @rowcode && 	// produit
+	x.unite_code == @optioncode		// unité
+)
+
+:
+
+// sinon, afficher les unités du groupe de produits auquel le produit appartient
+produits_unites_tailles_valides.Values.Any(x=>
+	x.groupe_code == groupe_alim_1 && // groupe alimentaire
+    x.unite_code == @optioncode		// unité	
+)
+```
+
+:::
+
+::::
+
+## Cas d'emploi 2 : fournir des bornes {.t2}
+
+![](assets/fournir_bornes.png){fig-align="center"}
+
+## Cas d'emploi 2 : fournir des bornes {.t2}
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+```{r}
+#| label: lire le tableau d'équipement
+#| eval: true
+#| echo: false
+equipe_annee_df <- readr::read_tsv("assets/reference_equipement.txt")
+
+reactable::reactable(
+  data = equipe_annee_df,
+  defaultPageSize = 8
+)
+```
+
+:::
+
+::: {.column width="70%"}
+
+
+```{.cpp}
+/* le nombre d'années de possession < seuil par article */
+
+
+// les rowcode du tableau et du roster ont les mêmes valeurs
+// `RefEquipe[@rowcode].annee` extrait l'année pour le `rowcode en cours`
+(self<=RefEquip[@rowcode].annee) || self==$neSaitPas
+```
+
+:::
+
+::::
+
+## Synthèses pratique {.t2}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment .semi-fade-out fragment-index=1}
+
+### Éviter de taper
+
+Imagine devoir composer une expression qui dit :
+
+- Si riz local 1, voici les unités possibles
+- Si riz local 2, voici les unités
+- ... et ainsi de suite pour 228 autre produits
+
+:::
+
+:::
+
+::: {.column width="50%" .fragment fragment-index=1}
+
+### Rendre modulaire
+
+- La structure statique; valeurs à actualiser
+  - Selon le contexte (e.g., pays par pays pour l'EHCVM)
+  - Selon le temps (e.g. EHCVM1 v EHCVM2 v EHCVM3)
+  - Selon le statut du travail (e.g. numéros de produit du questionnaire de Dakar en septembre; numréos maintenant en fin novembre)
+- Les réponses peuvent venir d'ailleurs (e.g. le rendement maximal par culture et par zone agricole, fouris par le ministère de l'agriculture)
+
+:::
+
+::::
+
+# Comment {background-color=var(--s3)}
+
+## Comment {.t3}
+
+::: {.box .box-3}
+Créer le tableau
+:::
+
+::: {.box .box-3}
+Importer/actualiser dans l'appli
+:::
+
+::: {.box .box-3}
+Utiliser dans les conditions
+:::
+
+# Créer le tableau {background-color=var(--s3)}
+
+## Rappel des conditions formelles {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Règles
+
+Doit contenir :
+
+- `rowcode`, une colonne de chiffres entiers et uniques
+- Une colonne ou plus de type numérique
+
+Ne doit pas dépasser :
+
+- Max colonnes : 10
+- Max lignes : 15 000
+
+:::
+
+::: {.column width="50%"}
+
+### Respecte les règles ?
+
+::: {.panel-tabset}
+
+### Exemple 1
+
+| rowcode | col1 | col2 |
+|---------|------|------|
+| 1       |   1   |  1.5    |
+| 2       |   13   |  15.3    |
+| 3       |   11.5   |  10.75    |
+
+### Exemple 2
+
+| rowcode | col1 | col2 |
+|---------|------|------|
+| 1       |   1   |  1.5    |
+| 2       |   13   |  15.3    |
+| 2       |   11.5   |  10.75    |
+
+### Exemple 2
+
+| rowcode |
+|---------|
+| 1       |
+| 2       |
+| 3       |
+
+:::
+
+:::
+
+::::
+
+# Importer/actualiser dans l'appli {background-color=var(--s3)}
+
+## Créer un fichier {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.fragment .semi-fade-out fragment-index=1}
+
+### Manipuler
+
+```stata
+// prévoir trois observations
+set obs 3
+
+// créer deux colonnes
+gen col1 = .
+gen col2 = .
+
+// définir la valeur de ces colonnes
+replace col1 = 1 in 1
+replace col1 = 2 in 2
+replace col1 = 3 in 3
+
+replace col2 = 4 in 1
+replace col2 = 5 in 2
+replace col2 = 6 in 3
+
+// utiliser le numéro d'observation séquentiel commme
+gen rowcode = _n
+
+// ne retenir que les colonnes nécessaires
+keep rowcode col1 col2
+```
+
+:::
+
+:::
+
+::: {.column width="50%" .fragment fragment-index=1}
+
+### Sauvegarder
+
+#### Stata
+
+```stata
+// la commande -outsheet-, par défaut, vise le format délimité par tab
+outsheet using "chemin/du/fichier/tableau_ref.tab" ///
+  nolabel /// prend la valeur numérique plutôt que l'étiquette de valeur
+  replace
+```
+
+#### R
+
+```r
+readr::write_tsv(
+  x = donnees_du_tableau,
+  file = "chemin/du/fichier/tableau_ref.tab",
+  col_names = TRUE
+)
+```
+
+#### Excel
+
+- `Sauvegarder` > `Sauvegarder sous`
+- Sélectionner `Text (Tab delimited) (*.txt)`
+- Sauvegarder
+
+:::
+
+::::
+
+## Importer le fichier {.t3}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/importer_actualiser_tableau_de_ref.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Naviguer vers le panneau à gauche dans Designer
+- Cliquer sur l'icône `r fontawesome::fa(name = "book")`
+- <details><summary>Si le tableau n'existe pas encore</summary>
+  - Ajouter un tableau
+  - Donner un nom. C'est par ce nom que l'on référencie le tableau dans les conditions
+  - Sélectionner un fichier
+  - Sauvegarder
+</details> 
+- <details><summary>Si le tableau existe déjà</summary>
+  - Retrouver le tableau
+  - Cliquer sur `METTRE À JOUR`
+  - Sélectionner un fichier
+  - Sauvegarder
+</details>
+
+:::
+
+::::
+
+## Utiliser dans les conditions {.t3}
+
+::: {.box .box-3}
+Avec la clé rowcode
+:::
+
+::: {.box .box-3}
+Avec les valeurs
+:::
+
+## Avec la clé {.t3}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{.cpp}
+nom_du_tableau[valeur_de_la_cle].nom_valeur_du_tableau
+```
+
+:::
+
+::: {.column width="40%"}
+
+- `nom_du_tableau`. Nom attribué au tableau dans le panneau des tableaux de référence.
+- `valeur_de_la_cle`. Variable qui contient une valeur à rechercher dans le tableau de référence.
+- `nom_valeur_du_tableau`. Nom de la colonne dans le tableau à fournir pour la ligne dont la valeur est égale à `valeur_de_la_cle`
+
+:::
+
+::::
+
+
+
+## Avec la clé {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| label: exemple du tableau d'équipement
+#| eval: true
+#| echo: false
+equipe_annee_df <- readr::read_tsv("assets/reference_equipement.txt")
+
+reactable::reactable(data = equipe_annee_df)
+```
+
+:::
+
+::: {.column width="50%"}
+
+
+```{.cpp}
+/* le nombre d'années de possession < seuil par article */
+
+
+// `nom_du_tableau` : RefEquipe
+// `valeur_de_la_cle` : @rowcode
+// `nom_valeur_du_tableau` : anneee
+(self<=RefEquip[@rowcode].annee) || self==$neSaitPas
+```
+
+:::
+
+::::
+
+## Exercice avec la clé {.t3}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+### Questions
+
+**1. Choisir un pays**
+
+Bénin...1<br>
+Burkina Faso...2<br>
+Côte d'Ivoire...3
+
+**2. Quelle est la population ?**
+
+:::
+
+::: {.column width="40%" .fragment fragment-index=1}
+
+### Tableau
+
+| rowcode | pop_faible | pop_eleve |
+|---------|------------|-----------|
+| 1       |   13 070 169         |  14 462 724         |
+| 2       |  21 478 690          |  23 548 781         |
+| 3       |   28 915 449         |  31 934 230         |
+
+Source: [https://www.worldometers.info/world-population/population-by-country/](https://www.worldometers.info/world-population/population-by-country/)
+Notes: le chiffre dit élévé est la population de 2024, le chiffre faible de 2020
+
+:::
+
+::: {.column width="40%" .fragment fragment-index=2}
+
+### Instructions
+
+- Créer une appli de ces 2 questions
+- Créer un tableau de référence avec les données du tableau.
+- Concevoir une validation pour la population : [`pop_faible`, `pop_eleve`] pour le pays sélectionné.
+
+#### Astuces
+
+- Dans le tableau, enlever les espaces (délimiteur de milier).
+- Dans la condition, convertir le pays en format  `int`: `(int)pays`. 
+
+:::
+
+::::
+
+## Avec les valeurs {.t3}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+```{.cpp}
+nom_du_tableau.Values.Operateur(x=>x.var_a_rechercher == 1)
+```
+
+:::
+
+::: {.column width="40%"}
+- `nom_du_tableau`. Nom attribué au tableau dans le panneau des tableaux de référence.
+- `Values`. Instruction à rechercher les valeurs du tableau plutôt que la clé.
+- `Operateur`. Type d'opération de recherche à effectuer.
+- `x`. Variable anonyme qui capte le résultat de la recherche.
+- `x.var_a_rechercher`. Variable dont les valeurs sont à rechercher dans le tableau.
+:::
+
+::::
+
+## Avec les valeurs {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| label: exemple du tableau des produits-unités-tailles
+#| eval: true
+#| echo: false
+
+produits_unites_tailles <- readr::read_tsv("assets/tableau_de_ref_ehcvm3.tab")
+
+reactable::reactable(
+  data = produits_unites_tailles,
+  height = 800
+)
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{.cpp code-line-numbers="1|4,11|3-6|10-14|18-22"}
+/* unités valides pour ce produit */
+
+// si produit existe dans le tableau...
+produits_unites_tailles_valides.Values.Any(x=>
+	x.produit_code == @rowcode
+) 
+
+?
+
+// ...n'afficher que les unités
+produits_unites_tailles_valides.Values.Any(x=>
+	x.produit_code == @rowcode && 	// produit
+	x.unite_code == @optioncode		// unité
+)
+
+:
+
+// sinon, afficher les unités du groupe de produits auquel le produit appartient
+produits_unites_tailles_valides.Values.Any(x=>
+	x.groupe_code == groupe_alim_1 && // groupe alimentaire
+    x.unite_code == @optioncode		// unité	
+)
+```
+
+:::
+
+::::
+
+
+## Exercice avec les valeurs {.t3}
+
+![](assets/langues_benin_togo.png){fig-align="center"}
+
+Sources: articles Wikipedia [ici](https://fr.wikipedia.org/wiki/Langues_au_B%C3%A9nin) et [ici](https://fr.wikipedia.org/wiki/Langues_au_Togo).
+
+## Exercice avec les valeurs {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Liste de langues par pays ...
+
+#### Bénin
+
+- Français (1)
+- Fon (11)
+- Yoruba (12)
+- Bariba (13)
+- Aja (2)
+
+#### Togo
+
+- Français (1)
+- Ewé (21)
+- Kabiyé (22)
+- Aja (2)
+
+:::
+
+::: {.column width="50%" .fragment}
+
+### ... traduite en tableau
+
+| rowcode | pays | langue |
+| --------| ---- | ------ |
+| 1       | 1     | 1     |
+| 2       | 1     | 11     |
+| 3       | 1     | 12     |
+| 4       | 1     | 13     |
+| 5       | 1     | 2     |
+| 6       | 2     | 1     |
+| 7       | 2     | 21     |
+| 8       | 2     | 22     |
+| 9       | 2     | 2     |
+
+Téléchargeable en format tab [ici](assets/langue_par_pays.tab).
+
+:::
+
+::::
+
+## Exercice avec les valeurs {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Questions
+
+**1. Où êtes-vous ?**
+
+Bénin...1<br>
+Togo....2
+
+**2. Quelles langues sont parlées ?**
+
+Français...1<br>
+Fon...11<br>
+Yoruba...12<br>
+Bariba...13<br>
+Aja...2<br>
+Ewé...21<br>
+Kabiyé...22
+
+:::
+
+::: {.column width="50%"}
+
+### Instructions
+
+- Créer une appli de ces 2 questions
+- Importer le tableau de référence
+  - Soit le créant de toute pièce
+  - Soit le téléchargeant [ici](assets/langue_par_pays.tab)
+- Concevoir une condition de filtre qui affiche les langues pertinentes par choix de pays
+
+#### Astuces
+
+- Adapter des éléments de la syntaxe sur les unités de consommation
+- Utiliser `@optioncode`
+
+:::
+
+::::

@@ -11,6 +11,7 @@ execute:
 agenda_df <- tibble::tribble(
   ~ jour, ~ titre, ~ lecon, ~ diapos, ~ exercices,
   "Jours 3 : mercredi 27 novembre", "Rosters imbriqués", NA, "slides/rosters_imbriques/rosters_imbriques.qmd", NA,
+  "Jours 4 : mercredi 28 novembre", "Tableaux de référence", NA, "slides/tableaux_de_reference/tableaux_de_reference.qmd", NA,
 )
 ```
 
