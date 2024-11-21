@@ -1,0 +1,185 @@
+---
+format: 
+    revealjs: 
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+```{r}
+
+```
+
+# Adapter l'application NSU `r fontawesome::fa(name = "screwdriver-wrench")` `r fontawesome::fa(name = "cart-shopping")` {background-color=var(--suso)}
+
+# Survol de l'appli {background-color=var(--s1)}
+
+## Applis des éditions passés {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/survol_nsu_ehcvm2.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Une application par groupe de produits
+- Une section par produit
+- Dans chaque section
+  - Un roster pour les unités prévues
+  - Un roster pour les unités prévue pour d'autres produits du groupe
+  - Un roster pour les unités non-prévues
+
+:::
+
+::::
+
+## Appli pour cette édition {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/survol_nsu_ehcvm3.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Une application qui contient tous les produits
+- Pour chaque produit, on fait l'inventaire des unités, y compris les nouvelles unités
+- Pour chaque unité on :
+  - indique les tailles
+  - prend une photo de l'ensemble des tailles ensemble
+- Pour chaque tailles, prendre un relevé de prix et de poids
+
+:::
+
+::::
+
+# Adaptation `r fontawesome::fa(name = "panorama")` {background-color=var(--s2)}
+
+## Strate {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/strates.gif){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Voir le plan d'échantillonage de l'enquête NSU
+- Remplacer avec les strates de l'étude (e.g., régions croisées avec milieu)
+
+:::
+
+::::
+
+## Monnaie (si pertinent) {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/monnaie.gif){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Si différent de FCFA, modifier le texte à afficher
+- Les questions concernant le prix font référence à cette variable
+
+:::
+
+::::
+
+## Tableau de référence {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/tableau_de_ref.gif){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Ouvrir le panneau des tableaux de référence
+- Retrouver `produits_unites_tailles_valides`
+- Cliquer sur `METTRE À JOUR`
+- Choisir le fichier de sortie du programme qui crée les tableaux de référence
+- Cliquer sur `SAUVEGARDER`
+
+:::
+
+::::
+
+## Produits par groupe de produits {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/ajuster_produits.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+### Ajuster les produits
+
+#### Comment
+
+- Tous les produits y sont
+- Supprimer ceux qui ne feront pas l'objet de l'enquête NSU
+
+#### Où
+
+- Inventaire des produits retrouvés au marché (`q100_*`)
+- Roster fixe par groupe de produits
+
+:::
+
+::::
+
+
+## Unités par groupe de produits {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/ajuster_unites.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Naviguer vers les sorties du programme pour créer le tableau de référence (`02_sorties/`)
+- Ouvrir le fichier `unites_par_groupe_de_produits.html`
+- Sélectionner `Unités par groupe de produits`
+- Naviguer vers l'appli
+- Remplacer les unités à deux endroits
+  - Unités attendues (questoin `q101_*`), n'oubliant pas <details><summary>les unités autres</summary>
+    ```
+    Autre 1...........-96
+    Autre 2...........-97
+    Autre 3...........-98
+    ```
+  </details>
+  - Unités absentes (roster fixe `unites_absentes_*`), excluant les unités autres
+
+:::
+
+::::
