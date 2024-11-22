@@ -151,6 +151,10 @@ Vérifier le contenu :
 ## Paramétrage préliminaires {.t1}
 
 ::: {.box .box-1}
+`r fontawesome::fa(name = "github")` Obtenir le programme
+:::
+
+::: {.box .box-1}
 `r fontawesome::fa(name = "download")` Télécharger les anciens tableaux de l'EHCVM
 :::
 
@@ -161,6 +165,31 @@ Vérifier le contenu :
 ::: {.box .box-1}
 `r fontawesome::fa(name = "paste")` Copier-coller le questionnaire Excel de l'EHCVM
 :::
+
+## `r fontawesome::fa(name = "github")` Obtenir le programme {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/obtenir_programme.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Si vous n'avez pas Git, 
+    - Retrouver l'organisation GitHub pour l'EHCVM3 : [https://github.com/ehcvm3](https://github.com/ehcvm3)
+    - Retrouver le répositoire du programme : `creer_tableau_produit_unite_taille`
+  - Cliquer sur le bouton `Code`
+  - Sélectionner `Download ZIP` depuis la liste déroulante
+  - Décomprimer dans / vers le dossier voulu
+- Si vous avez Git, suivre les instructions [ici](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+
+:::
+
+::::
+
 
 ## `r fontawesome::fa(name = "download")` Télécharger les anciens tableaux de l'EHCVM {.t1}
 
