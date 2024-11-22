@@ -359,7 +359,14 @@
     "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#paramétrage-préliminaires",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
     "section": "Paramétrage préliminaires",
-    "text": "Paramétrage préliminaires\n\n Télécharger les anciens tableaux de l’EHCVM\n\n\n Obtenir le questionnaire EHCVM en format JSON\n\n\n Copier-coller le questionnaire Excel de l’EHCVM"
+    "text": "Paramétrage préliminaires\n\n Obtenir le programme\n\n\n Télécharger les anciens tableaux de l’EHCVM\n\n\n Obtenir le questionnaire EHCVM en format JSON\n\n\n Copier-coller le questionnaire Excel de l’EHCVM"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-programme",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-programme",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Obtenir le programme",
+    "text": "Obtenir le programme\n\n\n\n\nVideo\n\n\n\n\nSi vous n’avez pas Git,\n\nRetrouver l’organisation GitHub pour l’EHCVM3 : https://github.com/ehcvm3\nRetrouver le répositoire du programme : creer_tableau_produit_unite_taille\nCliquer sur le bouton Code\nSélectionner Download ZIP depuis la liste déroulante\nDécomprimer dans / vers le dossier voulu\n\nSi vous avez Git, suivre les instructions ici."
   },
   {
     "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#télécharger-les-anciens-tableaux-de-lehcvm",
