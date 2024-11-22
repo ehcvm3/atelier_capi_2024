@@ -1,0 +1,384 @@
+---
+format: 
+    revealjs: 
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+```{r}
+
+```
+
+# `r fontawesome::fa(name = "trowel-bricks")` Créer un tableau de produits-unités-tailles {background-color=var(--suso)}
+
+# Le jeu entier `r fontawesome::fa(name = "futbol")` {background-color=var(--suso)}
+
+## Le jeu entier {.suso}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.box .box-1}
+Créer un tableau aisément modifiable
+:::
+
+::: {.fragment fragment-index=1}
+
+![](assets/survol_tableau.gif){fig-align="center"}
+
+:::
+
+:::
+
+::: {.column width="50%"}
+
+### Au départ
+
+- Plusieurs tableaux, en format tab
+- Dépourvu d'étiquettes
+- En retard :
+  - Anciens numéros
+  - Anciens produits
+
+::: {.fragment fragment-index=1}
+
+### Ensuite
+
+- Un seul tableau, en format Excel
+- Amplifié avec des étiquettes
+- Actualisé :
+  - Renuméroter les anciens produits
+  - Ajouter les nouveaux produits
+
+:::
+
+:::
+
+::::
+
+## Le jeu entier {.suso}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.box .box-1-faded}
+Créer un tableau aisément modifiable
+:::
+
+::: {.box .box-2}
+Parfaire le tableau
+:::
+
+:::
+
+::: {.column width="50%"}
+
+### Au départ
+
+- Anciens produits actualisés
+- Certains nouveaux produits ajoutés
+- D'autres produits--absents ou nouveaux--ont une ligne vide
+
+### Avec manipulation manuelle
+
+- Corriger / élargir les unités
+- Remplir les lacunes
+
+### Enfin
+
+- Tableau complet
+
+:::
+
+::::
+
+
+
+## Le jeu entier {.suso}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.box .box-1-faded}
+Créer un tableau aisément modifiable
+:::
+
+::: {.box .box-2-faded}
+Parfaire le tableau
+:::
+
+::: {.box .box-3}
+Sauvegarder sous format SuSo
+:::
+
+:::
+
+::: {.column width="50%"}
+
+### Au départ
+
+Tableau :
+
+- Manuellement manipulé
+- Avec des textes
+
+### D'abord
+
+Vérifier le contenu :
+
+- Tous les produits y sont
+- Toutes les lignes sont bien remplises
+
+### Ensuite
+
+- Préparer le contenu pour SuSo
+- Sauvegarder sous format tab
+
+:::
+
+::::
+
+# Créer un tableau aisément modifiable {background-color=var(--s1)}
+
+## Paramétrage préliminaires {.t1}
+
+::: {.box .box-1}
+`r fontawesome::fa(name = "download")` Télécharger les anciens tableaux de l'EHCVM
+:::
+
+::: {.box .box-1}
+`r fontawesome::fa(name = "code")` Obtenir le questionnaire EHCVM en format JSON
+:::
+
+::: {.box .box-1}
+`r fontawesome::fa(name = "paste")` Copier-coller le questionnaire Excel de l'EHCVM
+:::
+
+## `r fontawesome::fa(name = "download")` Télécharger les anciens tableaux de l'EHCVM {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/telecharger_anciens_tableaux.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+Pour actualiser les tableaux, il faut les chercher dans le questionnaire de l'édition passée :
+
+- Retrouver le questionnaire CAPI chez Designer
+- Télécharger les tableaux de référence qui traite des produits-unités-tailles valides
+
+L'on devrait s'attendre à télécharger 11 fichiers.
+
+:::
+
+::::
+
+## `r fontawesome::fa(name = "code")` Obtenir le questionnaire EHCVM2 en format JSON {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/obtenir_json.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+Deux méthodes pour localiser ce fichier (i.e., `document.json`) :
+
+1. Chercher dans les fichiers d'exportation de l'EHCVM2.
+2. Importer les questionnaire dans un serveur et exporter les données avec métadonnées.
+
+Après obtention, sauvegarder dans `01_entrees/ehcvm2/`
+
+:::
+
+::::
+
+## `r fontawesome::fa(name = "paste")` Copier-coller le questionnaire Excel de l'EHCVM {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/copier_qnr_excel.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+Comme le questionnaire CAPI peut ne pas être à jour, on exploitera la version Excel.
+
+Pour ce faire :
+
+- Sauvegarder la version pays
+- Sauvegarder sous format `xlsx`, `xlsm`, ou `xls` dans le dossier `01_entrees/ehcvm3/`
+
+:::
+
+::::
+
+## Créer un tableau Excel et un compilation de code {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/lancer_01_creer_tableau_excel.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+### Lancer le script
+
+<details>
+  <summary>Voir la procédure</summary>
+- Double-cliquer sur le fichier `.Rproj`
+- Ouvrir `01_creer_tableau_excel.R`
+- Cliquer sur le bouton `Source` pour lancer
+</details>
+
+### Voir les sorties
+
+- Naviguer vers `01_sorties/`
+- Constater les <details><summary>deux sorties du script</summary>
+  - `tableau_de_ref_ehcvm3.xlsx`, une représentation aisément lisible et modifiable de la concaténation des tableaux de référence
+  - `unites_par_groupe_de_produits.html`, une compilation des unités pour consulter et copier-coller lors de la prochaine phase de travail
+</details>
+
+:::
+
+::::
+
+## Tableau Excel {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/survol_tableau.gif){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+### Contenu
+
+- Un seul tableau
+- Amplifié avec des étiquettes
+- <details><summary>Actualisé</summary>
+  - Anciens produits renumérotés
+  - Nouveaux produits ajoutés
+</details>
+
+### Colonnes
+
+- **Codes.** Valeur retenue dans les applis ménage et NSU. À respecter.
+- **Texte.** Étiquette fournie uniquement pour faciliter la modification manuelle.
+
+:::
+
+::::
+
+## Compilation d'unités {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/survol_compilation_unites.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+### Utilité
+
+#### Lors de la modification manuelle
+
+- Retrouver une unité et/ou son code
+- Voir les unités pour d'autres produits du groupe alimentaire
+
+#### Lors de l'adaptation des applis
+
+- Copier-coller les modalités
+
+:::
+
+::::
+
+# Parfaire le tableau {background-color=var(--s2)}
+
+## Parfaire le tableau {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/parfaire_tableau.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+- Remplir les lacunes (e.g., nouveaux produits, anciens produits sans unité)
+- Ajuster les unités ici et là (e.g. refletter des trouvailles de la dernière enquête ménage, anticiper les unités de l'enquête NSU)
+- Sauvegarder dans le même fichier créé par le programme
+
+:::
+
+::::
+
+# Sauvegarder sous format SuSo {background-color=var(--s3)}
+
+## Sauvegarder sous format SuSo {.t3}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+![](assets/sauvegarder_pour_suso.mp4){fig-align="center"}
+
+:::
+
+::: {.column width="30%"}
+
+### Lancer le script
+
+<details>
+  <summary>Voir la procédure</summary>
+- Double-cliquer sur le fichier `.Rproj`
+- Ouvrir `02_creer_tableau_tab.R`
+- Cliquer sur le bouton `Source` pour lancer
+</details>
+
+### Réagir aux messages et corriger
+
+- <details>
+  <summary>Erreurs</summary>
+  - Colonnes devraient avoir un contenu numérique
+  - Tous les groupes de produit y sont
+  - Aucun contenu vide (e.g., `produit_code`, `unite_code`, etc)
+</details>
+- <details>
+  <summary>Avertissements</summary>
+  - Produits dont le nom n'est pas adapté au contexte pays
+</details>
+
+:::
+
+::::
