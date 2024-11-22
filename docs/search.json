@@ -161,11 +161,158 @@
     "text": "Contourner : vérifier le respect des limites\n\nLignes de rosterNiveaux d’imbriquationNombre d’éléments\n\n\nLimite : 200 lignes\nVérifions par niveau :\n\nProduits : nombre par groupe de produit largement &lt; 200\nUnités : ~ 40 &lt; 200\nTailles : ~ 5 &lt; 200\n\n\n\nLimite pour les rosters : 4 niveaux\nVérifions notre cas :\n\nNiveau 1 : Produits\nNiveau 2 : Unités\nNiveau 3 : Tailles / relevés\n\n\n\nLimites du nombre d’éléments dans un roster dans un questionnaire : 80 000\n\n\nDimensions\nLignes par niveau :\n\nProduits : 230\nUnités moyennes / produit : 10\nTailles moyennes / unité : 4\n\nObjets par niveau :\n\nProduit : 4\nUnité : 7\nTaille : 3\n\n\n\nCalcul du nombre\n\nNiveau produit : (230 * 4) = 920\nNiveau unité : (230 * 10 * 7) = 16 100\nNiveau taille : (230 * 10 * 4 * 3) = 27 600\nGrand total : 44 620 &lt; 80 000"
   },
   {
-    "objectID": "agenda.html",
-    "href": "agenda.html",
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#plan-de-la-présentation",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#plan-de-la-présentation",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Plan de la présentation",
+    "text": "Plan de la présentation\n\nQuoi\n\n\nPourquoi\n\n\nComment"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#structure",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#structure",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Structure",
+    "text": "Structure\n\n\nDictionnaire\nPour les développeurs :\n\nUne paire de clé et de valeurs\nClé : rowcode\nValeur : groupe de colonnes associées à cette clé\n\nEn de termes pratiques, un tableau qui consiste de :\n\nrowcode, une colonne de chiffres entiers et uniques\nUne colonne ou plus de type numérique\n\nEn, plus, des limites sur les dimensions :\n\nMax colonnes : 10\nMax lignes : 15 000\n\n\n\n\n\nrowcode\ncol1\ncol2\n\n\n\n\n1\n1\n1.5\n\n\n2\n13\n15.3\n\n\n3\n11.5\n10.75"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-1-trier-les-modalités",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-1-trier-les-modalités",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Cas d’emploi 1 : trier les modalités",
+    "text": "Cas d’emploi 1 : trier les modalités"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-1-trier-les-modalités-1",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-1-trier-les-modalités-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Cas d’emploi 1 : trier les modalités",
+    "text": "Cas d’emploi 1 : trier les modalités\n\n\n\n\n\n\n\n\n\n/* unités valides pour ce produit */\n\n// si produit existe dans le tableau...\nproduits_unites_tailles_valides.Values.Any(x=&gt;\n    x.produit_code == @rowcode\n) \n\n?\n\n// ...n'afficher que les unités\nproduits_unites_tailles_valides.Values.Any(x=&gt;\n    x.produit_code == @rowcode &&   // produit\n    x.unite_code == @optioncode     // unité\n)\n\n:\n\n// sinon, afficher les unités du groupe de produits auquel le produit appartient\nproduits_unites_tailles_valides.Values.Any(x=&gt;\n    x.groupe_code == groupe_alim_1 && // groupe alimentaire\n    x.unite_code == @optioncode     // unité    \n)"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-2-fournir-des-bornes",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-2-fournir-des-bornes",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Cas d’emploi 2 : fournir des bornes",
+    "text": "Cas d’emploi 2 : fournir des bornes"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-2-fournir-des-bornes-1",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#cas-demploi-2-fournir-des-bornes-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Cas d’emploi 2 : fournir des bornes",
+    "text": "Cas d’emploi 2 : fournir des bornes\n\n\n\n\n\n\n\n\n\n/* le nombre d'années de possession &lt; seuil par article */\n\n\n// les rowcode du tableau et du roster ont les mêmes valeurs\n// `RefEquipe[@rowcode].annee` extrait l'année pour le `rowcode en cours`\n(self&lt;=RefEquip[@rowcode].annee) || self==$neSaitPas"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#synthèses-pratique",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#synthèses-pratique",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Synthèses pratique",
+    "text": "Synthèses pratique\n\n\n\n\nÉviter de taper\nImagine devoir composer une expression qui dit :\n\nSi riz local 1, voici les unités possibles\nSi riz local 2, voici les unités\n… et ainsi de suite pour 228 autre produits\n\n\n\n\nRendre modulaire\n\nLa structure statique; valeurs à actualiser\n\nSelon le contexte (e.g., pays par pays pour l’EHCVM)\nSelon le temps (e.g. EHCVM1 v EHCVM2 v EHCVM3)\nSelon le statut du travail (e.g. numéros de produit du questionnaire de Dakar en septembre; numréos maintenant en fin novembre)\n\nLes réponses peuvent venir d’ailleurs (e.g. le rendement maximal par culture et par zone agricole, fouris par le ministère de l’agriculture)"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#comment-1",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#comment-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Comment",
+    "text": "Comment\n\nCréer le tableau\n\n\nImporter/actualiser dans l’appli\n\n\nUtiliser dans les conditions"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#rappel-des-conditions-formelles",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#rappel-des-conditions-formelles",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Rappel des conditions formelles",
+    "text": "Rappel des conditions formelles\n\n\nRègles\nDoit contenir :\n\nrowcode, une colonne de chiffres entiers et uniques\nUne colonne ou plus de type numérique\n\nNe doit pas dépasser :\n\nMax colonnes : 10\nMax lignes : 15 000\n\n\nRespecte les règles ?\n\nExemple 1Exemple 2Exemple 2\n\n\n\n\n\nrowcode\ncol1\ncol2\n\n\n\n\n1\n1\n1.5\n\n\n2\n13\n15.3\n\n\n3\n11.5\n10.75\n\n\n\n\n\n\n\n\nrowcode\ncol1\ncol2\n\n\n\n\n1\n1\n1.5\n\n\n2\n13\n15.3\n\n\n2\n11.5\n10.75\n\n\n\n\n\n\n\n\nrowcode\n\n\n\n\n1\n\n\n2\n\n\n3"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#créer-un-fichier",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#créer-un-fichier",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Créer un fichier",
+    "text": "Créer un fichier\n\n\n\n\nManipuler\n// prévoir trois observations\nset obs 3\n\n// créer deux colonnes\ngen col1 = .\ngen col2 = .\n\n// définir la valeur de ces colonnes\nreplace col1 = 1 in 1\nreplace col1 = 2 in 2\nreplace col1 = 3 in 3\n\nreplace col2 = 4 in 1\nreplace col2 = 5 in 2\nreplace col2 = 6 in 3\n\n// utiliser le numéro d'observation séquentiel commme\ngen rowcode = _n\n\n// ne retenir que les colonnes nécessaires\nkeep rowcode col1 col2\n\n\n\nSauvegarder\nStata\n// la commande -outsheet-, par défaut, vise le format délimité par tab\noutsheet using \"chemin/du/fichier/tableau_ref.tab\" ///\n  nolabel /// prend la valeur numérique plutôt que l'étiquette de valeur\n  replace\nR\nreadr::write_tsv(\n  x = donnees_du_tableau,\n  file = \"chemin/du/fichier/tableau_ref.tab\",\n  col_names = TRUE\n)\nExcel\n\nSauvegarder &gt; Sauvegarder sous\nSélectionner Text (Tab delimited) (*.txt)\nSauvegarder"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#importer-le-fichier",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#importer-le-fichier",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Importer le fichier",
+    "text": "Importer le fichier\n\n\n\n\nVideo\n\n\n\n\nNaviguer vers le panneau à gauche dans Designer\nCliquer sur l’icône \n\n\nSi le tableau n’existe pas encore\n\n\nAjouter un tableau\nDonner un nom. C’est par ce nom que l’on référencie le tableau dans les conditions\nSélectionner un fichier\nSauvegarder\n\n\n\n\nSi le tableau existe déjà\n\n\nRetrouver le tableau\nCliquer sur METTRE À JOUR\nSélectionner un fichier\nSauvegarder"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#utiliser-dans-les-conditions",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#utiliser-dans-les-conditions",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Utiliser dans les conditions",
+    "text": "Utiliser dans les conditions\n\nAvec la clé rowcode\n\n\nAvec les valeurs"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-la-clé",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-la-clé",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Avec la clé",
+    "text": "Avec la clé\n\n\nnom_du_tableau[valeur_de_la_cle].nom_valeur_du_tableau\n\n\nnom_du_tableau. Nom attribué au tableau dans le panneau des tableaux de référence.\nvaleur_de_la_cle. Variable qui contient une valeur à rechercher dans le tableau de référence.\nnom_valeur_du_tableau. Nom de la colonne dans le tableau à fournir pour la ligne dont la valeur est égale à valeur_de_la_cle"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-la-clé-1",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-la-clé-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Avec la clé",
+    "text": "Avec la clé\n\n\n\n\n\n\n\n\n\n/* le nombre d'années de possession &lt; seuil par article */\n\n\n// `nom_du_tableau` : RefEquipe\n// `valeur_de_la_cle` : @rowcode\n// `nom_valeur_du_tableau` : anneee\n(self&lt;=RefEquip[@rowcode].annee) || self==$neSaitPas"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-la-clé",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-la-clé",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Exercice avec la clé",
+    "text": "Exercice avec la clé\n\n\nQuestions\n1. Choisir un pays\nBénin…1 Burkina Faso…2 Côte d’Ivoire…3\n2. Quelle est la population ?\n\n\nTableau\n\n\n\nrowcode\npop_faible\npop_eleve\n\n\n\n\n1\n13 070 169\n14 462 724\n\n\n2\n21 478 690\n23 548 781\n\n\n3\n28 915 449\n31 934 230\n\n\n\nSource: https://www.worldometers.info/world-population/population-by-country/ Notes: le chiffre dit élévé est la population de 2024, le chiffre faible de 2020\n\n\nInstructions\n\nCréer une appli de ces 2 questions\nCréer un tableau de référence avec les données du tableau.\nConcevoir une validation pour la population : [pop_faible, pop_eleve] pour le pays sélectionné.\n\nAstuces\n\nDans le tableau, enlever les espaces (délimiteur de milier).\nDans la condition, convertir le pays en format int: (int)pays."
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-les-valeurs",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-les-valeurs",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Avec les valeurs",
+    "text": "Avec les valeurs\n\n\nnom_du_tableau.Values.Operateur(x=&gt;x.var_a_rechercher == 1)\n\n\nnom_du_tableau. Nom attribué au tableau dans le panneau des tableaux de référence.\nValues. Instruction à rechercher les valeurs du tableau plutôt que la clé.\nOperateur. Type d’opération de recherche à effectuer.\nx. Variable anonyme qui capte le résultat de la recherche.\nx.var_a_rechercher. Variable dont les valeurs sont à rechercher dans le tableau."
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-les-valeurs-1",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#avec-les-valeurs-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Avec les valeurs",
+    "text": "Avec les valeurs\n\n\n\n\n\n\n\n\n\n/* unités valides pour ce produit */\n\n// si produit existe dans le tableau...\nproduits_unites_tailles_valides.Values.Any(x=&gt;\n    x.produit_code == @rowcode\n) \n\n?\n\n// ...n'afficher que les unités\nproduits_unites_tailles_valides.Values.Any(x=&gt;\n    x.produit_code == @rowcode &&   // produit\n    x.unite_code == @optioncode     // unité\n)\n\n:\n\n// sinon, afficher les unités du groupe de produits auquel le produit appartient\nproduits_unites_tailles_valides.Values.Any(x=&gt;\n    x.groupe_code == groupe_alim_1 && // groupe alimentaire\n    x.unite_code == @optioncode     // unité    \n)"
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-les-valeurs",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-les-valeurs",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Exercice avec les valeurs",
+    "text": "Exercice avec les valeurs\n\nSources: articles Wikipedia ici et ici."
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-les-valeurs-1",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-les-valeurs-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Exercice avec les valeurs",
+    "text": "Exercice avec les valeurs\n\n\nListe de langues par pays …\nBénin\n\nFrançais (1)\nFon (11)\nYoruba (12)\nBariba (13)\nAja (2)\n\nTogo\n\nFrançais (1)\nEwé (21)\nKabiyé (22)\nAja (2)\n\n\n\n… traduite en tableau\n\n\n\nrowcode\npays\nlangue\n\n\n\n\n1\n1\n1\n\n\n2\n1\n11\n\n\n3\n1\n12\n\n\n4\n1\n13\n\n\n5\n1\n2\n\n\n6\n2\n1\n\n\n7\n2\n21\n\n\n8\n2\n22\n\n\n9\n2\n2\n\n\n\nTéléchargeable en format tab ici."
+  },
+  {
+    "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-les-valeurs-2",
+    "href": "slides/tableaux_de_reference/tableaux_de_reference.html#exercice-avec-les-valeurs-2",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Exercice avec les valeurs",
+    "text": "Exercice avec les valeurs\n\n\nQuestions\n1. Où êtes-vous ?\nBénin…1 Togo….2\n2. Quelles langues sont parlées ?\nFrançais…1 Fon…11 Yoruba…12 Bariba…13 Aja…2 Ewé…21 Kabiyé…22\n\nInstructions\n\nCréer une appli de ces 2 questions\nImporter le tableau de référence\n\nSoit le créant de toute pièce\nSoit le téléchargeant ici\n\nConcevoir une condition de filtre qui affiche les langues pertinentes par choix de pays\n\nAstuces\n\nAdapter des éléments de la syntaxe sur les unités de consommation\nUtiliser @optioncode"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "atelier_capi_2024",
     "section": "",
-    "text": "Agenda des séances\n\n\nAvec des liens vers les page de leçon, les diapos, et les exercices\n\n\nSéance\nLeçon\nDiapos\nExercices\n\n\n\n\nJours 3 : mercredi 27 novembre\n\n\nRosters imbriqués"
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "pre-requis/02_progs_01_programmes.html",
@@ -180,17 +327,143 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "agenda.html",
+    "href": "agenda.html",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
     "section": "",
-    "text": "About this site"
+    "text": "Agenda des séances\n\n\nAvec des liens vers les page de leçon, les diapos, et les exercices\n\n\nSéance\nLeçon\nDiapos\nExercices\n\n\n\n\nJours 3 : mercredi 27 novembre\n\n\nRosters imbriqués\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJours 4 : jeudi 28 novembre\n\n\nTableaux de référence\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCréer un tableau des produits-unités-tailles\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdapter l'application NSU"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "atelier_capi_2024",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-1",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Le jeu entier",
+    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\n\n\n\n\n\n\n\nAu départ\n\nPlusieurs tableaux, en format tab\nDépourvu d’étiquettes\nEn retard :\n\nAnciens numéros\nAnciens produits\n\n\n\n\nEnsuite\n\nUn seul tableau, en format Excel\nAmplifié avec des étiquettes\nActualisé :\n\nRenuméroter les anciens produits\nAjouter les nouveaux produits"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-2",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-2",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Le jeu entier",
+    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\nParfaire le tableau\n\n\nAu départ\n\nAnciens produits actualisés\nCertains nouveaux produits ajoutés\nD’autres produits–absents ou nouveaux–ont une ligne vide\n\nAvec manipulation manuelle\n\nCorriger / élargir les unités\nRemplir les lacunes\n\nEnfin\n\nTableau complet"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-3",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-3",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Le jeu entier",
+    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\nParfaire le tableau\n\n\nSauvegarder sous format SuSo\n\n\nAu départ\nTableau :\n\nManuellement manipulé\nAvec des textes\n\nD’abord\nVérifier le contenu :\n\nTous les produits y sont\nToutes les lignes sont bien remplises\n\nEnsuite\n\nPréparer le contenu pour SuSo\nSauvegarder sous format tab"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#paramétrage-préliminaires",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#paramétrage-préliminaires",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Paramétrage préliminaires",
+    "text": "Paramétrage préliminaires\n\n Télécharger les anciens tableaux de l’EHCVM\n\n\n Obtenir le questionnaire EHCVM en format JSON\n\n\n Copier-coller le questionnaire Excel de l’EHCVM"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#télécharger-les-anciens-tableaux-de-lehcvm",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#télécharger-les-anciens-tableaux-de-lehcvm",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Télécharger les anciens tableaux de l’EHCVM",
+    "text": "Télécharger les anciens tableaux de l’EHCVM\n\n\n\n\nVideo\n\n\n\nPour actualiser les tableaux, il faut les chercher dans le questionnaire de l’édition passée :\n\nRetrouver le questionnaire CAPI chez Designer\nTélécharger les tableaux de référence qui traite des produits-unités-tailles valides\n\nL’on devrait s’attendre à télécharger 11 fichiers."
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-questionnaire-ehcvm2-en-format-json",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-questionnaire-ehcvm2-en-format-json",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Obtenir le questionnaire EHCVM2 en format JSON",
+    "text": "Obtenir le questionnaire EHCVM2 en format JSON\n\n\n\n\nVideo\n\n\n\nDeux méthodes pour localiser ce fichier (i.e., document.json) :\n\nChercher dans les fichiers d’exportation de l’EHCVM2.\nImporter les questionnaire dans un serveur et exporter les données avec métadonnées.\n\nAprès obtention, sauvegarder dans 01_entrees/ehcvm2/"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#copier-coller-le-questionnaire-excel-de-lehcvm",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#copier-coller-le-questionnaire-excel-de-lehcvm",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Copier-coller le questionnaire Excel de l’EHCVM",
+    "text": "Copier-coller le questionnaire Excel de l’EHCVM\n\n\n\n\nVideo\n\n\n\nComme le questionnaire CAPI peut ne pas être à jour, on exploitera la version Excel.\nPour ce faire :\n\nSauvegarder la version pays\nSauvegarder sous format xlsx, xlsm, ou xls dans le dossier 01_entrees/ehcvm3/"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#créer-un-tableau-excel-et-un-compilation-de-code",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#créer-un-tableau-excel-et-un-compilation-de-code",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Créer un tableau Excel et un compilation de code",
+    "text": "Créer un tableau Excel et un compilation de code\n\n\n\n\nVideo\n\n\n\nLancer le script\n\n\nVoir la procédure\n\n\nDouble-cliquer sur le fichier .Rproj\nOuvrir 01_creer_tableau_excel.R\nCliquer sur le bouton Source pour lancer\n\n\nVoir les sorties\n\nNaviguer vers 01_sorties/\nConstater les\n\n\ndeux sorties du script\n\n\ntableau_de_ref_ehcvm3.xlsx, une représentation aisément lisible et modifiable de la concaténation des tableaux de référence\nunites_par_groupe_de_produits.html, une compilation des unités pour consulter et copier-coller lors de la prochaine phase de travail"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#tableau-excel",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#tableau-excel",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Tableau Excel",
+    "text": "Tableau Excel\n\n\n\n\n\n\n\n\nContenu\n\nUn seul tableau\nAmplifié avec des étiquettes\n\n\nActualisé\n\n\nAnciens produits renumérotés\nNouveaux produits ajoutés\n\n\n\nColonnes\n\nCodes. Valeur retenue dans les applis ménage et NSU. À respecter.\nTexte. Étiquette fournie uniquement pour faciliter la modification manuelle."
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#compilation-dunités",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#compilation-dunités",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Compilation d’unités",
+    "text": "Compilation d’unités\n\n\n\n\nVideo\n\n\n\nUtilité\nLors de la modification manuelle\n\nRetrouver une unité et/ou son code\nVoir les unités pour d’autres produits du groupe alimentaire\n\nLors de l’adaptation des applis\n\nCopier-coller les modalités"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#parfaire-le-tableau-1",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#parfaire-le-tableau-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Parfaire le tableau",
+    "text": "Parfaire le tableau\n\n\n\n\nVideo\n\n\n\n\nRemplir les lacunes (e.g., nouveaux produits, anciens produits sans unité)\nAjuster les unités ici et là (e.g. refletter des trouvailles de la dernière enquête ménage, anticiper les unités de l’enquête NSU)\nSauvegarder dans le même fichier créé par le programme"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#sauvegarder-sous-format-suso-1",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#sauvegarder-sous-format-suso-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Sauvegarder sous format SuSo",
+    "text": "Sauvegarder sous format SuSo\n\n\n\n\nVideo\n\n\n\nLancer le script\n\n\nVoir la procédure\n\n\nDouble-cliquer sur le fichier .Rproj\nOuvrir 02_creer_tableau_tab.R\nCliquer sur le bouton Source pour lancer\n\n\nRéagir aux messages et corriger\n\n\n\nErreurs\n\n\nColonnes devraient avoir un contenu numérique\nTous les groupes de produit y sont\nAucun contenu vide (e.g., produit_code, unite_code, etc)\n\n\n\n\nAvertissements\n\n\nProduits dont le nom n’est pas adapté au contexte pays"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#applis-des-éditions-passés",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#applis-des-éditions-passés",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Applis des éditions passés",
+    "text": "Applis des éditions passés\n\n\n\n\nVideo\n\n\n\n\nUne application par groupe de produits\nUne section par produit\nDans chaque section\n\nUn roster pour les unités prévues\nUn roster pour les unités prévue pour d’autres produits du groupe\nUn roster pour les unités non-prévues"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#appli-pour-cette-édition",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#appli-pour-cette-édition",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Appli pour cette édition",
+    "text": "Appli pour cette édition\n\n\n\n\nVideo\n\n\n\n\nUne application qui contient tous les produits\nPour chaque produit, on fait l’inventaire des unités, y compris les nouvelles unités\nPour chaque unité on :\n\nindique les tailles\nprend une photo de l’ensemble des tailles ensemble\n\nPour chaque tailles, prendre un relevé de prix et de poids"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#strate",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#strate",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Strate",
+    "text": "Strate\n\n\n\n\n\n\n\n\n\nVoir le plan d’échantillonage de l’enquête NSU\nRemplacer avec les strates de l’étude (e.g., régions croisées avec milieu)"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#monnaie-si-pertinent",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#monnaie-si-pertinent",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Monnaie (si pertinent)",
+    "text": "Monnaie (si pertinent)\n\n\n\n\n\n\n\n\n\nSi différent de FCFA, modifier le texte à afficher\nLes questions concernant le prix font référence à cette variable"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#tableau-de-référence",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#tableau-de-référence",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Tableau de référence",
+    "text": "Tableau de référence\n\n\n\n\n\n\n\n\n\nOuvrir le panneau des tableaux de référence\nRetrouver produits_unites_tailles_valides\nCliquer sur METTRE À JOUR\nChoisir le fichier de sortie du programme qui crée les tableaux de référence\nCliquer sur SAUVEGARDER"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#produits-par-groupe-de-produits",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#produits-par-groupe-de-produits",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Produits par groupe de produits",
+    "text": "Produits par groupe de produits\n\n\n\n\nVideo\n\n\n\nAjuster les produits\nComment\n\nTous les produits y sont\nSupprimer ceux qui ne feront pas l’objet de l’enquête NSU\n\nOù\n\nInventaire des produits retrouvés au marché (q100_*)\nRoster fixe par groupe de produits"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#unités-par-groupe-de-produits",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#unités-par-groupe-de-produits",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Unités par groupe de produits",
+    "text": "Unités par groupe de produits\n\n\n\n\nVideo\n\n\n\n\nNaviguer vers les sorties du programme pour créer le tableau de référence (02_sorties/)\nOuvrir le fichier unites_par_groupe_de_produits.html\nSélectionner Unités par groupe de produits\nNaviguer vers l’appli\nRemplacer les unités à deux endroits\n\nUnités attendues (questoin q101_*), n’oubliant pas\n\n\nles unités autres\n\nAutre 1...........-96\nAutre 2...........-97\nAutre 3...........-98\n\nUnités absentes (roster fixe unites_absentes_*), excluant les unités autres"
   }
 ]

@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <title>Atelier de renforcement de capacité et d'adaptation CAPI 2024 – tableaux_de_reference</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="../../site_libs/core-js-2.5.3/shim.min.js"></script>
+  <script src="../../site_libs/react-18.2.0/react.min.js"></script>
+  <script src="../../site_libs/react-18.2.0/react-dom.min.js"></script>
+  <script src="../../site_libs/reactwidget-2.0.0/react-tools.js"></script>
+  <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <link href="../../site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+  <script src="../../site_libs/reactable-binding-0.4.4/reactable.js"></script>
+  <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="tableaux-de-référence" class="title-slide slide level1 center" data-background-color="var(--suso)">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"></path></svg> Tableaux de référence</h1>
+
+</section>
+<section id="plan-de-la-présentation" class="slide level2 suso">
+<h2>Plan de la présentation</h2>
+<div class="box box-1">
+<p>Quoi</p>
+</div>
+<div class="box box-2">
+<p>Pourquoi</p>
+</div>
+<div class="box box-3">
+<p>Comment</p>
+</div>
+</section></section>
+<section>
+<section id="quoi" class="title-slide slide level1 center" data-background-color="var(--s1)">
+<h1>Quoi</h1>
+
+</section>
+<section id="structure" class="slide level2 t1">
+<h2>Structure</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="dictionnaire">Dictionnaire</h3>
+<p>Pour les développeurs :</p>
+<ul>
+<li>Une paire de clé et de valeurs</li>
+<li>Clé : <code>rowcode</code></li>
+<li>Valeur : groupe de colonnes associées à cette clé</li>
+</ul>
+<p>En de termes pratiques, un tableau qui consiste de :</p>
+<ul>
+<li><code>rowcode</code>, une colonne de chiffres entiers et uniques</li>
+<li>Une colonne ou plus de type numérique</li>
+</ul>
+<p>En, plus, des limites sur les dimensions :</p>
+<ul>
+<li>Max colonnes : 10</li>
+<li>Max lignes : 15 000</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>rowcode</th>
+<th>col1</th>
+<th>col2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>1.5</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>13</td>
+<td>15.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>11.5</td>
+<td>10.75</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section></section>
+<section>
+<section id="pourquoi" class="title-slide slide level1 center" data-background-color="var(--s2)">
+<h1>Pourquoi</h1>
+
+</section>
+<section id="cas-demploi-1-trier-les-modalités" class="slide level2 t2">
+<h2>Cas d’emploi 1 : trier les modalités</h2>
+
+<img data-src="assets/trier_unites_tailles.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="cas-demploi-1-trier-les-modalités-1" class="slide level2 t2">
+<h2>Cas d’emploi 1 : trier les modalités</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-7babb70a31ea06833ef3" class="reactable html-widget" style="width:auto;height:800px;"></div>
+<script type="application/json" data-for="htmlwidget-7babb70a31ea06833ef3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"rowcode":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095],"produit_code":[1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,13,13,13,13,13,13,13,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,14,14,14,14,17,17,17,17,17,17,17,17,18,18,18,19,20,21,22,23,24,25,25,25,25,26,26,26,26,27,27,27,27,28,28,28,28,30,30,30,30,30,30,30,30,30,30,30,32,32,32,32,33,33,33,33,34,34,34,34,35,35,35,35,36,36,36,36,37,37,37,37,38,38,38,38,38,38,38,38,39,39,39,39,40,40,40,40,41,41,41,41,42,42,42,43,43,43,43,44,44,44,44,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,59,59,59,59,59,59,59,59,59,59,64,64,64,64,64,64,64,64,65,65,65,65,65,65,65,65,65,66,66,66,66,66,66,66,66,66,67,67,67,67,67,67,67,67,67,68,68,68,68,68,69,69,69,69,69,70,70,70,70,70,70,70,73,73,73,73,73,73,73,73,73,73,73,73,73,74,74,74,74,74,74,74,74,74,74,81,81,81,87,87,87,87,87,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,91,91,91,91,91,91,92,92,92,92,92,92,92,92,92,92,92,93,93,93,93,93,93,93,93,93,93,94,94,94,94,94,94,94,94,94,94,94,95,96,98,98,98,98,98,98,99,99,99,99,100,100,100,100,100,100,100,101,101,101,101,101,101,101,101,102,102,102,102,102,103,103,103,103,103,103,103,103,103,105,105,105,105,105,106,106,106,106,106,108,108,108,109,109,109,109,109,109,111,111,111,113,113,113,113,113,113,114,114,114,114,115,115,115,115,116,116,116,116,116,116,116,117,117,117,117,117,117,118,118,118,118,118,118,119,119,119,119,119,120,120,120,121,121,121,122,122,122,122,122,122,122,122,122,123,123,123,123,123,123,123,123,123,123,123,123,124,124,124,124,124,124,124,124,124,124,124,126,126,126,126,126,126,126,127,127,127,127,127,129,129,129,130,130,130,132,132,132,134,134,134,134,134,134,134,134,135,135,135,135,135,136,136,136,136,136,136,136,136,136,137,137,137,137,137,137,137,137,137,140,140,140,140,140,140,140,140,140,141,141,141,141,141,141,141,141,141,141,141,142,142,142,142,142,142,142,142,142,142,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,145,145,145,145,145,145,145,145,145,145,145,147,147,147,147,147,149,149,149,149,149,149,150,150,150,150,150,150,151,151,151,151,151,151,151,151,152,152,152,152,152,152,152,152,152,153,153,153,153,153,153,153,154,154,154,154,155,155,155,155,158,158,158,158,158,159,159,159,159,159,162,162,162,163,163,163,163,163,163,163,163,163,163,163,163,164,164,164,164,164,164,164,167,167,167,167,167,167,167,167,167,167,167,167,167,168,168,168,168,168,168,168,168,168,168,168,168,169,169,169,169,169,172,172,172,172,172,172,177,177,177,177,177,177,177,177,177,177,177,177,178,178,178,178,178,178,178,178,178,178,178,178,200,200,200,200,200,200,201,201,201,201,201,201,203,203,203,203,203,203,204,204,204,204,204,204,205,205,205,205,205,207,207,207,213,213,213,213,213,213,214,214,214,214,214,214,214,214,214,214,214,214,215,215,215,215,215,215,215,215,215,215,215,215,216,216,217,217,218,218,218,218,218],"unite_code":[100,108,108,108,135,136,139,139,139,149,251,252,100,108,108,108,135,138,145,149,251,252,100,136,137,138,100,136,137,138,100,136,137,138,100,108,108,108,135,138,139,139,139,145,149,252,100,108,108,108,115,135,138,139,139,139,145,149,252,100,108,108,108,135,138,139,139,139,145,149,252,100,108,108,136,138,149,252,100,108,108,108,135,145,149,252,100,109,109,109,109,109,135,136,138,139,139,139,149,252,100,100,109,109,109,136,138,139,139,139,139,149,252,129,129,129,139,139,139,139,139,147,147,147,147,147,129,129,129,129,139,139,139,147,139,139,139,147,143,143,143,147,143,143,143,147,103,104,104,104,126,126,126,140,141,141,141,100,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,100,100,143,143,143,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,147,147,147,100,118,254,255,100,143,143,143,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,118,118,118,143,143,143,147,147,147,100,118,118,118,143,147,147,147,100,118,118,118,143,143,147,147,147,100,118,118,118,143,143,147,147,147,100,118,118,118,143,143,147,147,147,100,143,143,143,147,100,143,143,143,147,139,139,139,143,143,143,149,101,106,106,106,115,115,125,125,125,139,139,139,139,101,109,109,109,131,131,131,139,139,139,107,118,129,130,139,139,139,147,100,100,101,101,101,106,106,106,106,106,106,106,106,106,106,111,111,111,113,113,113,113,113,113,113,113,113,113,130,139,139,139,139,139,139,139,139,139,139,139,139,143,143,143,147,147,147,147,148,149,252,100,100,101,101,101,106,106,106,106,106,106,106,106,106,106,111,111,111,113,113,113,113,113,113,113,113,113,113,130,139,139,139,139,139,139,139,139,139,139,139,139,143,143,143,147,147,147,147,148,149,252,100,111,111,111,149,252,101,106,106,106,113,113,113,113,139,139,139,101,106,106,106,113,113,113,139,139,139,101,106,106,106,113,113,113,139,139,139,148,106,106,143,143,143,147,147,147,143,147,147,147,128,143,143,143,147,147,147,100,128,143,143,143,147,147,147,100,139,139,139,139,139,139,139,143,143,143,147,147,147,143,143,147,147,147,143,143,147,147,147,147,147,147,143,143,143,147,147,147,143,143,143,143,143,143,147,147,147,100,143,143,143,100,143,143,143,143,143,143,147,147,147,147,143,143,143,147,147,147,143,143,143,147,147,147,128,128,143,143,143,139,139,139,143,143,143,139,139,139,139,143,143,143,149,252,112,112,112,128,136,138,143,143,143,143,149,252,124,124,124,139,139,139,139,139,143,143,143,112,112,112,143,143,143,143,139,139,143,143,143,143,143,143,143,143,143,143,143,143,107,107,107,107,107,120,120,120,107,107,107,107,139,100,108,108,108,135,138,145,149,252,100,108,108,108,135,138,145,149,252,100,108,108,108,135,138,145,149,252,108,108,108,139,139,139,143,143,143,149,252,108,108,108,139,139,139,143,145,149,252,108,108,108,139,139,139,145,149,252,108,108,108,139,139,139,143,143,252,109,109,109,120,120,120,139,139,139,149,252,139,139,139,149,252,108,108,108,145,149,252,143,143,143,147,147,147,143,143,143,147,147,147,147,147,132,132,143,143,143,147,147,147,147,100,128,136,138,143,143,143,143,143,143,149,143,143,143,143,139,139,139,149,252,139,139,139,149,252,139,139,139,100,129,135,136,138,139,139,139,139,143,143,143,113,113,113,113,131,131,131,100,108,108,108,133,133,133,139,139,139,139,149,252,108,108,108,139,139,139,139,143,143,143,149,252,143,143,143,149,252,111,111,111,143,143,143,100,115,139,139,139,143,143,143,147,147,147,147,100,115,139,139,139,143,143,143,147,147,147,147,107,107,107,139,139,139,107,107,107,139,139,139,107,107,107,139,139,139,107,107,107,139,139,139,129,129,139,139,139,131,131,139,124,127,139,139,994,1003,124,139,139,991,993,993,994,997,997,1000,1002,1003,124,139,139,991,993,993,994,997,997,1000,1002,1003,139,139,139,139,101,113,113,113,997],"taille_code":[0,1,2,3,0,0,1,2,3,0,0,0,0,1,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,0,0,1,2,3,0,0,0,0,1,2,3,3,0,0,1,2,3,0,0,0,0,1,2,3,0,0,1,2,3,0,0,0,0,1,3,0,0,0,0,0,1,2,3,0,0,0,0,0,1,2,3,98,99,0,0,0,1,2,3,0,0,0,0,1,2,3,0,0,1,2,2,3,0,0,1,2,3,1,2,3,98,99,1,3,98,0,0,0,0,0,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,0,1,2,3,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,0,1,1,2,2,3,3,0,1,2,3,0,1,2,3,0,1,2,3,1,2,3,0,2,0,0,0,1,2,3,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,1,2,3,1,2,3,1,2,3,0,1,2,3,3,1,2,3,0,1,2,3,2,3,1,2,3,0,1,2,3,2,3,1,2,3,0,1,2,3,2,3,1,2,3,0,1,2,3,0,0,1,2,3,0,1,2,3,1,2,3,0,0,1,2,3,2,3,1,2,3,1,2,3,98,0,1,2,3,1,2,3,1,2,3,0,0,0,0,1,2,3,0,0,0,0,0,0,1,1,1,2,2,2,3,3,3,3,1,2,3,1,1,1,2,2,2,3,3,3,98,0,1,1,1,1,2,2,2,2,3,3,3,3,1,2,3,0,1,2,3,2,0,0,0,0,0,0,0,1,1,1,2,2,2,3,3,3,3,1,2,3,1,1,1,2,2,2,3,3,3,98,0,1,1,1,1,2,2,2,2,3,3,3,3,1,2,3,0,1,2,3,2,0,0,0,1,2,3,0,0,0,1,2,3,1,2,3,98,1,2,3,0,1,2,3,1,2,3,1,2,3,0,1,2,3,1,2,3,1,2,3,2,3,3,1,2,3,1,2,3,2,1,2,3,3,1,2,3,1,2,3,0,3,1,2,3,1,2,3,0,1,2,3,98,1,2,3,1,2,3,1,2,3,1,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,0,1,2,3,0,1,2,3,1,2,3,1,2,3,98,1,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,1,2,3,98,1,2,3,0,0,1,2,3,2,0,0,1,2,3,98,0,0,1,2,3,1,2,3,98,99,1,2,3,1,2,3,1,2,3,98,2,98,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,98,99,1,2,3,1,2,3,98,1,0,1,2,3,0,0,0,0,0,0,1,2,3,0,0,0,0,0,0,1,2,3,0,0,0,0,0,1,2,3,1,2,3,1,2,3,0,0,1,2,3,1,2,3,2,0,0,0,1,2,3,1,2,3,0,0,0,1,2,3,1,2,3,1,2,0,1,2,3,1,2,3,1,2,3,0,0,1,2,3,0,0,1,2,3,0,0,0,1,2,3,1,2,3,1,2,3,1,2,3,98,99,2,3,1,2,3,1,2,3,98,0,2,0,0,1,2,3,1,2,3,0,1,2,3,98,1,2,3,0,0,1,2,3,0,0,1,2,3,0,0,0,0,0,1,2,3,98,1,2,3,1,2,3,98,1,2,3,0,1,2,3,1,2,3,1,2,3,98,0,0,1,2,3,1,2,3,98,1,2,3,0,0,1,2,3,0,0,1,2,3,1,2,3,0,2,1,2,3,1,2,3,1,2,3,98,0,2,1,2,3,1,2,3,1,2,3,98,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,1,2,3,1,2,0,0,0,1,2,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,1,2,1,2,0,1,2,3,0],"groupe_code":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11]},"columns":[{"id":"rowcode","name":"rowcode","type":"numeric"},{"id":"produit_code","name":"produit_code","type":"numeric"},{"id":"unite_code","name":"unite_code","type":"numeric"},{"id":"taille_code","name":"taille_code","type":"numeric"},{"id":"groupe_code","name":"groupe_code","type":"numeric"}],"height":"800px","dataKey":"d4056071af34493d79b118b2a6e3e63a"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb1" data-code-line-numbers="1|4,11|3-6|10-14|18-22"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a></a><span class="co">/* unités valides pour ce produit */</span></span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="co">// si produit existe dans le tableau...</span></span>
+<span id="cb1-4"><a></a>produits_unites_tailles_valides<span class="op">.</span>Values<span class="op">.</span>Any<span class="op">(</span>x<span class="op">=&gt;</span></span>
+<span id="cb1-5"><a></a>    x<span class="op">.</span>produit_code <span class="op">==</span> <span class="er">@</span>rowcode</span>
+<span id="cb1-6"><a></a><span class="op">)</span> </span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a><span class="op">?</span></span>
+<span id="cb1-9"><a></a></span>
+<span id="cb1-10"><a></a><span class="co">// ...n'afficher que les unités</span></span>
+<span id="cb1-11"><a></a>produits_unites_tailles_valides<span class="op">.</span>Values<span class="op">.</span>Any<span class="op">(</span>x<span class="op">=&gt;</span></span>
+<span id="cb1-12"><a></a>    x<span class="op">.</span>produit_code <span class="op">==</span> <span class="er">@</span>rowcode <span class="op">&amp;&amp;</span>   <span class="co">// produit</span></span>
+<span id="cb1-13"><a></a>    x<span class="op">.</span>unite_code <span class="op">==</span> <span class="er">@</span>optioncode     <span class="co">// unité</span></span>
+<span id="cb1-14"><a></a><span class="op">)</span></span>
+<span id="cb1-15"><a></a></span>
+<span id="cb1-16"><a></a><span class="op">:</span></span>
+<span id="cb1-17"><a></a></span>
+<span id="cb1-18"><a></a><span class="co">// sinon, afficher les unités du groupe de produits auquel le produit appartient</span></span>
+<span id="cb1-19"><a></a>produits_unites_tailles_valides<span class="op">.</span>Values<span class="op">.</span>Any<span class="op">(</span>x<span class="op">=&gt;</span></span>
+<span id="cb1-20"><a></a>    x<span class="op">.</span>groupe_code <span class="op">==</span> groupe_alim_1 <span class="op">&amp;&amp;</span> <span class="co">// groupe alimentaire</span></span>
+<span id="cb1-21"><a></a>    x<span class="op">.</span>unite_code <span class="op">==</span> <span class="er">@</span>optioncode     <span class="co">// unité    </span></span>
+<span id="cb1-22"><a></a><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="cas-demploi-2-fournir-des-bornes" class="slide level2 t2">
+<h2>Cas d’emploi 2 : fournir des bornes</h2>
+
+<img data-src="assets/fournir_bornes.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="cas-demploi-2-fournir-des-bornes-1" class="slide level2 t2">
+<h2>Cas d’emploi 2 : fournir des bornes</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-13ef6494a159ff0aca3d" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-13ef6494a159ff0aca3d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"rowcode":[801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842],"annee":[75,100,100,100,100,75,100,100,75,75,75,75,75,75,50,75,75,50,75,75,75,75,50,50,75,75,75,100,150,150,75,75,50,75,20,15,40,50,150,100,100,75]},"columns":[{"id":"rowcode","name":"rowcode","type":"numeric"},{"id":"annee","name":"annee","type":"numeric"}],"defaultPageSize":8,"dataKey":"e72f1cc4406f8d18e5541e6844418203"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><a></a><span class="co">/* le nombre d'années de possession &lt; seuil par article */</span></span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="co">// les rowcode du tableau et du roster ont les mêmes valeurs</span></span>
+<span id="cb2-5"><a></a><span class="co">// `RefEquipe[@rowcode].annee` extrait l'année pour le `rowcode en cours`</span></span>
+<span id="cb2-6"><a></a><span class="op">(</span>self<span class="op">&lt;=</span>RefEquip<span class="op">[</span><span class="er">@</span>rowcode<span class="op">].</span>annee<span class="op">)</span> <span class="op">||</span> self<span class="op">==</span><span class="er">$</span>neSaitPas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="synthèses-pratique" class="slide level2 t2">
+<h2>Synthèses pratique</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<!-- -->
+<h3 id="éviter-de-taper">Éviter de taper</h3>
+<p>Imagine devoir composer une expression qui dit :</p>
+<ul>
+<li>Si riz local 1, voici les unités possibles</li>
+<li>Si riz local 2, voici les unités</li>
+<li>… et ainsi de suite pour 228 autre produits</li>
+</ul>
+</div>
+</div><div class="column fragment" data-fragment-index="1" style="width:50%;">
+<!-- -->
+<h3 id="rendre-modulaire">Rendre modulaire</h3>
+<ul>
+<li>La structure statique; valeurs à actualiser
+<ul>
+<li>Selon le contexte (e.g., pays par pays pour l’EHCVM)</li>
+<li>Selon le temps (e.g.&nbsp;EHCVM1 v EHCVM2 v EHCVM3)</li>
+<li>Selon le statut du travail (e.g.&nbsp;numéros de produit du questionnaire de Dakar en septembre; numréos maintenant en fin novembre)</li>
+</ul></li>
+<li>Les réponses peuvent venir d’ailleurs (e.g.&nbsp;le rendement maximal par culture et par zone agricole, fouris par le ministère de l’agriculture)</li>
+</ul>
+</div></div>
+</section></section>
+<section>
+<section id="comment" class="title-slide slide level1 center" data-background-color="var(--s3)">
+<h1>Comment</h1>
+
+</section>
+<section id="comment-1" class="slide level2 t3">
+<h2>Comment</h2>
+<div class="box box-3">
+<p>Créer le tableau</p>
+</div>
+<div class="box box-3">
+<p>Importer/actualiser dans l’appli</p>
+</div>
+<div class="box box-3">
+<p>Utiliser dans les conditions</p>
+</div>
+</section></section>
+<section>
+<section id="créer-le-tableau" class="title-slide slide level1 center" data-background-color="var(--s3)">
+<h1>Créer le tableau</h1>
+
+</section>
+<section id="rappel-des-conditions-formelles" class="slide level2 t3">
+<h2>Rappel des conditions formelles</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="règles">Règles</h3>
+<p>Doit contenir :</p>
+<ul>
+<li><code>rowcode</code>, une colonne de chiffres entiers et uniques</li>
+<li>Une colonne ou plus de type numérique</li>
+</ul>
+<p>Ne doit pas dépasser :</p>
+<ul>
+<li>Max colonnes : 10</li>
+<li>Max lignes : 15 000</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="respecte-les-règles">Respecte les règles ?</h3>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Exemple 1</a></li><li><a href="#tabset-1-2">Exemple 2</a></li><li><a href="#tabset-1-3">Exemple 2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>rowcode</th>
+<th>col1</th>
+<th>col2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>1.5</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>13</td>
+<td>15.3</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>11.5</td>
+<td>10.75</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-1-2">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>rowcode</th>
+<th>col1</th>
+<th>col2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>1.5</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>13</td>
+<td>15.3</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>11.5</td>
+<td>10.75</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-1-3">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>rowcode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="importeractualiser-dans-lappli" class="title-slide slide level1 center" data-background-color="var(--s3)">
+<h1>Importer/actualiser dans l’appli</h1>
+
+</section>
+<section id="créer-un-fichier" class="slide level2 t3">
+<h2>Créer un fichier</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment semi-fade-out" data-fragment-index="1">
+<!-- -->
+<h3 id="manipuler">Manipuler</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a></a><span class="co">// prévoir trois observations</span></span>
+<span id="cb3-2"><a></a><span class="kw">set</span> <span class="kw">obs</span> 3</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="co">// créer deux colonnes</span></span>
+<span id="cb3-5"><a></a><span class="kw">gen</span> col1 = .</span>
+<span id="cb3-6"><a></a><span class="kw">gen</span> col2 = .</span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a><span class="co">// définir la valeur de ces colonnes</span></span>
+<span id="cb3-9"><a></a><span class="kw">replace</span> col1 = 1 <span class="kw">in</span> 1</span>
+<span id="cb3-10"><a></a><span class="kw">replace</span> col1 = 2 <span class="kw">in</span> 2</span>
+<span id="cb3-11"><a></a><span class="kw">replace</span> col1 = 3 <span class="kw">in</span> 3</span>
+<span id="cb3-12"><a></a></span>
+<span id="cb3-13"><a></a><span class="kw">replace</span> col2 = 4 <span class="kw">in</span> 1</span>
+<span id="cb3-14"><a></a><span class="kw">replace</span> col2 = 5 <span class="kw">in</span> 2</span>
+<span id="cb3-15"><a></a><span class="kw">replace</span> col2 = 6 <span class="kw">in</span> 3</span>
+<span id="cb3-16"><a></a></span>
+<span id="cb3-17"><a></a><span class="co">// utiliser le numéro d'observation séquentiel commme</span></span>
+<span id="cb3-18"><a></a><span class="kw">gen</span> rowcode = <span class="dt">_n</span></span>
+<span id="cb3-19"><a></a></span>
+<span id="cb3-20"><a></a><span class="co">// ne retenir que les colonnes nécessaires</span></span>
+<span id="cb3-21"><a></a><span class="kw">keep</span> rowcode col1 col2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column fragment" data-fragment-index="1" style="width:50%;">
+<!-- -->
+<h3 id="sauvegarder">Sauvegarder</h3>
+<h4 id="stata">Stata</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource stata number-lines code-with-copy"><code class="sourceCode stata"><span id="cb4-1"><a></a><span class="co">// la commande -outsheet-, par défaut, vise le format délimité par tab</span></span>
+<span id="cb4-2"><a></a><span class="kw">outsheet</span> <span class="kw">using</span> <span class="st">"chemin/du/fichier/tableau_ref.tab"</span> <span class="co">///</span></span>
+<span id="cb4-3"><a></a>  <span class="kw">nolabel</span> <span class="co">/// prend la valeur numérique plutôt que l'étiquette de valeur</span></span>
+<span id="cb4-4"><a></a>  <span class="kw">replace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h4 id="r">R</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>readr<span class="sc">::</span><span class="fu">write_tsv</span>(</span>
+<span id="cb5-2"><a></a>  <span class="at">x =</span> donnees_du_tableau,</span>
+<span id="cb5-3"><a></a>  <span class="at">file =</span> <span class="st">"chemin/du/fichier/tableau_ref.tab"</span>,</span>
+<span id="cb5-4"><a></a>  <span class="at">col_names =</span> <span class="cn">TRUE</span></span>
+<span id="cb5-5"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h4 id="excel">Excel</h4>
+<ul>
+<li><code>Sauvegarder</code> &gt; <code>Sauvegarder sous</code></li>
+<li>Sélectionner <code>Text (Tab delimited) (*.txt)</code></li>
+<li>Sauvegarder</li>
+</ul>
+</div></div>
+</section>
+<section id="importer-le-fichier" class="slide level2 t3">
+<h2>Importer le fichier</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><video data-src="assets/importer_actualiser_tableau_de_ref.mp4" class="quarto-figure quarto-figure-center" controls=""><a href="assets/importer_actualiser_tableau_de_ref.mp4">Video</a></video></p>
+</figure>
+</div>
+</div><div class="column" style="width:30%;">
+<ul>
+<li>Naviguer vers le panneau à gauche dans Designer</li>
+<li>Cliquer sur l’icône <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg></li>
+<li><details>
+<summary>
+Si le tableau n’existe pas encore
+</summary>
+<ul>
+<li>Ajouter un tableau</li>
+<li>Donner un nom. C’est par ce nom que l’on référencie le tableau dans les conditions</li>
+<li>Sélectionner un fichier</li>
+<li>Sauvegarder</li>
+</ul>
+</details></li>
+<li><details>
+<summary>
+Si le tableau existe déjà
+</summary>
+<ul>
+<li>Retrouver le tableau</li>
+<li>Cliquer sur <code>METTRE À JOUR</code></li>
+<li>Sélectionner un fichier</li>
+<li>Sauvegarder</li>
+</ul>
+</details></li>
+</ul>
+</div></div>
+</section>
+<section id="utiliser-dans-les-conditions" class="slide level2 t3">
+<h2>Utiliser dans les conditions</h2>
+<div class="box box-3">
+<p>Avec la clé rowcode</p>
+</div>
+<div class="box box-3">
+<p>Avec les valeurs</p>
+</div>
+</section>
+<section id="avec-la-clé" class="slide level2 t3">
+<h2>Avec la clé</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb6-1"><a></a>nom_du_tableau<span class="op">[</span>valeur_de_la_cle<span class="op">].</span>nom_valeur_du_tableau</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li><code>nom_du_tableau</code>. Nom attribué au tableau dans le panneau des tableaux de référence.</li>
+<li><code>valeur_de_la_cle</code>. Variable qui contient une valeur à rechercher dans le tableau de référence.</li>
+<li><code>nom_valeur_du_tableau</code>. Nom de la colonne dans le tableau à fournir pour la ligne dont la valeur est égale à <code>valeur_de_la_cle</code></li>
+</ul>
+</div></div>
+</section>
+<section id="avec-la-clé-1" class="slide level2 t3">
+<h2>Avec la clé</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-999e6e5f157834668829" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-999e6e5f157834668829">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"rowcode":[801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842],"annee":[75,100,100,100,100,75,100,100,75,75,75,75,75,75,50,75,75,50,75,75,75,75,50,50,75,75,75,100,150,150,75,75,50,75,20,15,40,50,150,100,100,75]},"columns":[{"id":"rowcode","name":"rowcode","type":"numeric"},{"id":"annee","name":"annee","type":"numeric"}],"dataKey":"e72f1cc4406f8d18e5541e6844418203"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb7-1"><a></a><span class="co">/* le nombre d'années de possession &lt; seuil par article */</span></span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="co">// `nom_du_tableau` : RefEquipe</span></span>
+<span id="cb7-5"><a></a><span class="co">// `valeur_de_la_cle` : @rowcode</span></span>
+<span id="cb7-6"><a></a><span class="co">// `nom_valeur_du_tableau` : anneee</span></span>
+<span id="cb7-7"><a></a><span class="op">(</span>self<span class="op">&lt;=</span>RefEquip<span class="op">[</span><span class="er">@</span>rowcode<span class="op">].</span>annee<span class="op">)</span> <span class="op">||</span> self<span class="op">==</span><span class="er">$</span>neSaitPas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="exercice-avec-la-clé" class="slide level2 t3">
+<h2>Exercice avec la clé</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<h3 id="questions">Questions</h3>
+<p><strong>1. Choisir un pays</strong></p>
+<p>Bénin…1<br> Burkina Faso…2<br> Côte d’Ivoire…3</p>
+<p><strong>2. Quelle est la population ?</strong></p>
+</div><div class="column fragment" data-fragment-index="1" style="width:40%;">
+<!-- -->
+<h3 id="tableau">Tableau</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>rowcode</th>
+<th>pop_faible</th>
+<th>pop_eleve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>13 070 169</td>
+<td>14 462 724</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>21 478 690</td>
+<td>23 548 781</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>28 915 449</td>
+<td>31 934 230</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://www.worldometers.info/world-population/population-by-country/">https://www.worldometers.info/world-population/population-by-country/</a> Notes: le chiffre dit élévé est la population de 2024, le chiffre faible de 2020</p>
+</div><div class="column fragment" data-fragment-index="2" style="width:40%;">
+<!-- -->
+<h3 id="instructions">Instructions</h3>
+<ul>
+<li>Créer une appli de ces 2 questions</li>
+<li>Créer un tableau de référence avec les données du tableau.</li>
+<li>Concevoir une validation pour la population : [<code>pop_faible</code>, <code>pop_eleve</code>] pour le pays sélectionné.</li>
+</ul>
+<h4 id="astuces">Astuces</h4>
+<ul>
+<li>Dans le tableau, enlever les espaces (délimiteur de milier).</li>
+<li>Dans la condition, convertir le pays en format <code>int</code>: <code>(int)pays</code>.</li>
+</ul>
+</div></div>
+</section>
+<section id="avec-les-valeurs" class="slide level2 t3">
+<h2>Avec les valeurs</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb8-1"><a></a>nom_du_tableau<span class="op">.</span>Values<span class="op">.</span>Operateur<span class="op">(</span>x<span class="op">=&gt;</span>x<span class="op">.</span>var_a_rechercher <span class="op">==</span> <span class="dv">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li><code>nom_du_tableau</code>. Nom attribué au tableau dans le panneau des tableaux de référence.</li>
+<li><code>Values</code>. Instruction à rechercher les valeurs du tableau plutôt que la clé.</li>
+<li><code>Operateur</code>. Type d’opération de recherche à effectuer.</li>
+<li><code>x</code>. Variable anonyme qui capte le résultat de la recherche.</li>
+<li><code>x.var_a_rechercher</code>. Variable dont les valeurs sont à rechercher dans le tableau.</li>
+</ul>
+</div></div>
+</section>
+<section id="avec-les-valeurs-1" class="slide level2 t3">
+<h2>Avec les valeurs</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-b87da7670e4ea10870ea" class="reactable html-widget" style="width:auto;height:800px;"></div>
+<script type="application/json" data-for="htmlwidget-b87da7670e4ea10870ea">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"rowcode":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,638,639,640,641,642,643,644,645,646,647,648,649,650,651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677,678,679,680,681,682,683,684,685,686,687,688,689,690,691,692,693,694,695,696,697,698,699,700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,848,849,850,851,852,853,854,855,856,857,858,859,860,861,862,863,864,865,866,867,868,869,870,871,872,873,874,875,876,877,878,879,880,881,882,883,884,885,886,887,888,889,890,891,892,893,894,895,896,897,898,899,900,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,928,929,930,931,932,933,934,935,936,937,938,939,940,941,942,943,944,945,946,947,948,949,950,951,952,953,954,955,956,957,958,959,960,961,962,963,964,965,966,967,968,969,970,971,972,973,974,975,976,977,978,979,980,981,982,983,984,985,986,987,988,989,990,991,992,993,994,995,996,997,998,999,1000,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095],"produit_code":[1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,13,13,13,13,13,13,13,13,13,13,13,13,13,13,14,14,14,14,14,14,14,14,14,14,14,14,14,17,17,17,17,17,17,17,17,18,18,18,19,20,21,22,23,24,25,25,25,25,26,26,26,26,27,27,27,27,28,28,28,28,30,30,30,30,30,30,30,30,30,30,30,32,32,32,32,33,33,33,33,34,34,34,34,35,35,35,35,36,36,36,36,37,37,37,37,38,38,38,38,38,38,38,38,39,39,39,39,40,40,40,40,41,41,41,41,42,42,42,43,43,43,43,44,44,44,44,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,58,59,59,59,59,59,59,59,59,59,59,64,64,64,64,64,64,64,64,65,65,65,65,65,65,65,65,65,66,66,66,66,66,66,66,66,66,67,67,67,67,67,67,67,67,67,68,68,68,68,68,69,69,69,69,69,70,70,70,70,70,70,70,73,73,73,73,73,73,73,73,73,73,73,73,73,74,74,74,74,74,74,74,74,74,74,81,81,81,87,87,87,87,87,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,91,91,91,91,91,91,92,92,92,92,92,92,92,92,92,92,92,93,93,93,93,93,93,93,93,93,93,94,94,94,94,94,94,94,94,94,94,94,95,96,98,98,98,98,98,98,99,99,99,99,100,100,100,100,100,100,100,101,101,101,101,101,101,101,101,102,102,102,102,102,103,103,103,103,103,103,103,103,103,105,105,105,105,105,106,106,106,106,106,108,108,108,109,109,109,109,109,109,111,111,111,113,113,113,113,113,113,114,114,114,114,115,115,115,115,116,116,116,116,116,116,116,117,117,117,117,117,117,118,118,118,118,118,118,119,119,119,119,119,120,120,120,121,121,121,122,122,122,122,122,122,122,122,122,123,123,123,123,123,123,123,123,123,123,123,123,124,124,124,124,124,124,124,124,124,124,124,126,126,126,126,126,126,126,127,127,127,127,127,129,129,129,130,130,130,132,132,132,134,134,134,134,134,134,134,134,135,135,135,135,135,136,136,136,136,136,136,136,136,136,137,137,137,137,137,137,137,137,137,140,140,140,140,140,140,140,140,140,141,141,141,141,141,141,141,141,141,141,141,142,142,142,142,142,142,142,142,142,142,143,143,143,143,143,143,143,143,143,144,144,144,144,144,144,144,144,144,145,145,145,145,145,145,145,145,145,145,145,147,147,147,147,147,149,149,149,149,149,149,150,150,150,150,150,150,151,151,151,151,151,151,151,151,152,152,152,152,152,152,152,152,152,153,153,153,153,153,153,153,154,154,154,154,155,155,155,155,158,158,158,158,158,159,159,159,159,159,162,162,162,163,163,163,163,163,163,163,163,163,163,163,163,164,164,164,164,164,164,164,167,167,167,167,167,167,167,167,167,167,167,167,167,168,168,168,168,168,168,168,168,168,168,168,168,169,169,169,169,169,172,172,172,172,172,172,177,177,177,177,177,177,177,177,177,177,177,177,178,178,178,178,178,178,178,178,178,178,178,178,200,200,200,200,200,200,201,201,201,201,201,201,203,203,203,203,203,203,204,204,204,204,204,204,205,205,205,205,205,207,207,207,213,213,213,213,213,213,214,214,214,214,214,214,214,214,214,214,214,214,215,215,215,215,215,215,215,215,215,215,215,215,216,216,217,217,218,218,218,218,218],"unite_code":[100,108,108,108,135,136,139,139,139,149,251,252,100,108,108,108,135,138,145,149,251,252,100,136,137,138,100,136,137,138,100,136,137,138,100,108,108,108,135,138,139,139,139,145,149,252,100,108,108,108,115,135,138,139,139,139,145,149,252,100,108,108,108,135,138,139,139,139,145,149,252,100,108,108,136,138,149,252,100,108,108,108,135,145,149,252,100,109,109,109,109,109,135,136,138,139,139,139,149,252,100,100,109,109,109,136,138,139,139,139,139,149,252,129,129,129,139,139,139,139,139,147,147,147,147,147,129,129,129,129,139,139,139,147,139,139,139,147,143,143,143,147,143,143,143,147,103,104,104,104,126,126,126,140,141,141,141,100,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,100,100,143,143,143,143,143,143,100,143,143,143,100,143,143,143,100,143,143,143,147,147,147,100,118,254,255,100,143,143,143,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,100,100,100,100,100,100,118,118,118,118,118,118,118,118,118,118,143,143,143,143,143,143,143,143,143,143,143,143,143,143,143,147,147,147,147,147,147,147,147,147,147,147,147,147,254,255,100,118,118,118,143,143,143,147,147,147,100,118,118,118,143,147,147,147,100,118,118,118,143,143,147,147,147,100,118,118,118,143,143,147,147,147,100,118,118,118,143,143,147,147,147,100,143,143,143,147,100,143,143,143,147,139,139,139,143,143,143,149,101,106,106,106,115,115,125,125,125,139,139,139,139,101,109,109,109,131,131,131,139,139,139,107,118,129,130,139,139,139,147,100,100,101,101,101,106,106,106,106,106,106,106,106,106,106,111,111,111,113,113,113,113,113,113,113,113,113,113,130,139,139,139,139,139,139,139,139,139,139,139,139,143,143,143,147,147,147,147,148,149,252,100,100,101,101,101,106,106,106,106,106,106,106,106,106,106,111,111,111,113,113,113,113,113,113,113,113,113,113,130,139,139,139,139,139,139,139,139,139,139,139,139,143,143,143,147,147,147,147,148,149,252,100,111,111,111,149,252,101,106,106,106,113,113,113,113,139,139,139,101,106,106,106,113,113,113,139,139,139,101,106,106,106,113,113,113,139,139,139,148,106,106,143,143,143,147,147,147,143,147,147,147,128,143,143,143,147,147,147,100,128,143,143,143,147,147,147,100,139,139,139,139,139,139,139,143,143,143,147,147,147,143,143,147,147,147,143,143,147,147,147,147,147,147,143,143,143,147,147,147,143,143,143,143,143,143,147,147,147,100,143,143,143,100,143,143,143,143,143,143,147,147,147,147,143,143,143,147,147,147,143,143,143,147,147,147,128,128,143,143,143,139,139,139,143,143,143,139,139,139,139,143,143,143,149,252,112,112,112,128,136,138,143,143,143,143,149,252,124,124,124,139,139,139,139,139,143,143,143,112,112,112,143,143,143,143,139,139,143,143,143,143,143,143,143,143,143,143,143,143,107,107,107,107,107,120,120,120,107,107,107,107,139,100,108,108,108,135,138,145,149,252,100,108,108,108,135,138,145,149,252,100,108,108,108,135,138,145,149,252,108,108,108,139,139,139,143,143,143,149,252,108,108,108,139,139,139,143,145,149,252,108,108,108,139,139,139,145,149,252,108,108,108,139,139,139,143,143,252,109,109,109,120,120,120,139,139,139,149,252,139,139,139,149,252,108,108,108,145,149,252,143,143,143,147,147,147,143,143,143,147,147,147,147,147,132,132,143,143,143,147,147,147,147,100,128,136,138,143,143,143,143,143,143,149,143,143,143,143,139,139,139,149,252,139,139,139,149,252,139,139,139,100,129,135,136,138,139,139,139,139,143,143,143,113,113,113,113,131,131,131,100,108,108,108,133,133,133,139,139,139,139,149,252,108,108,108,139,139,139,139,143,143,143,149,252,143,143,143,149,252,111,111,111,143,143,143,100,115,139,139,139,143,143,143,147,147,147,147,100,115,139,139,139,143,143,143,147,147,147,147,107,107,107,139,139,139,107,107,107,139,139,139,107,107,107,139,139,139,107,107,107,139,139,139,129,129,139,139,139,131,131,139,124,127,139,139,994,1003,124,139,139,991,993,993,994,997,997,1000,1002,1003,124,139,139,991,993,993,994,997,997,1000,1002,1003,139,139,139,139,101,113,113,113,997],"taille_code":[0,1,2,3,0,0,1,2,3,0,0,0,0,1,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,0,0,1,2,3,0,0,0,0,1,2,3,3,0,0,1,2,3,0,0,0,0,1,2,3,0,0,1,2,3,0,0,0,0,1,3,0,0,0,0,0,1,2,3,0,0,0,0,0,1,2,3,98,99,0,0,0,1,2,3,0,0,0,0,1,2,3,0,0,1,2,2,3,0,0,1,2,3,1,2,3,98,99,1,3,98,0,0,0,0,0,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,0,1,2,3,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,1,2,3,0,0,1,1,2,2,3,3,0,1,2,3,0,1,2,3,0,1,2,3,1,2,3,0,2,0,0,0,1,2,3,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0,0,0,0,0,0,1,1,1,2,2,2,2,3,3,3,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3,0,1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,1,2,3,1,2,3,1,2,3,0,1,2,3,3,1,2,3,0,1,2,3,2,3,1,2,3,0,1,2,3,2,3,1,2,3,0,1,2,3,2,3,1,2,3,0,1,2,3,0,0,1,2,3,0,1,2,3,1,2,3,0,0,1,2,3,2,3,1,2,3,1,2,3,98,0,1,2,3,1,2,3,1,2,3,0,0,0,0,1,2,3,0,0,0,0,0,0,1,1,1,2,2,2,3,3,3,3,1,2,3,1,1,1,2,2,2,3,3,3,98,0,1,1,1,1,2,2,2,2,3,3,3,3,1,2,3,0,1,2,3,2,0,0,0,0,0,0,0,1,1,1,2,2,2,3,3,3,3,1,2,3,1,1,1,2,2,2,3,3,3,98,0,1,1,1,1,2,2,2,2,3,3,3,3,1,2,3,0,1,2,3,2,0,0,0,1,2,3,0,0,0,1,2,3,1,2,3,98,1,2,3,0,1,2,3,1,2,3,1,2,3,0,1,2,3,1,2,3,1,2,3,2,3,3,1,2,3,1,2,3,2,1,2,3,3,1,2,3,1,2,3,0,3,1,2,3,1,2,3,0,1,2,3,98,1,2,3,1,2,3,1,2,3,1,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,0,1,2,3,0,1,2,3,1,2,3,1,2,3,98,1,2,3,1,2,3,1,2,3,1,2,3,2,3,1,2,3,1,2,3,1,2,3,1,2,3,98,1,2,3,0,0,1,2,3,2,0,0,1,2,3,98,0,0,1,2,3,1,2,3,98,99,1,2,3,1,2,3,1,2,3,98,2,98,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,98,99,1,2,3,1,2,3,98,1,0,1,2,3,0,0,0,0,0,0,1,2,3,0,0,0,0,0,0,1,2,3,0,0,0,0,0,1,2,3,1,2,3,1,2,3,0,0,1,2,3,1,2,3,2,0,0,0,1,2,3,1,2,3,0,0,0,1,2,3,1,2,3,1,2,0,1,2,3,1,2,3,1,2,3,0,0,1,2,3,0,0,1,2,3,0,0,0,1,2,3,1,2,3,1,2,3,1,2,3,98,99,2,3,1,2,3,1,2,3,98,0,2,0,0,1,2,3,1,2,3,0,1,2,3,98,1,2,3,0,0,1,2,3,0,0,1,2,3,0,0,0,0,0,1,2,3,98,1,2,3,1,2,3,98,1,2,3,0,1,2,3,1,2,3,1,2,3,98,0,0,1,2,3,1,2,3,98,1,2,3,0,0,1,2,3,0,0,1,2,3,1,2,3,0,2,1,2,3,1,2,3,1,2,3,98,0,2,1,2,3,1,2,3,1,2,3,98,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2,1,2,3,1,2,0,0,0,1,2,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,1,2,1,2,0,1,2,3,0],"groupe_code":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11]},"columns":[{"id":"rowcode","name":"rowcode","type":"numeric"},{"id":"produit_code","name":"produit_code","type":"numeric"},{"id":"unite_code","name":"unite_code","type":"numeric"},{"id":"taille_code","name":"taille_code","type":"numeric"},{"id":"groupe_code","name":"groupe_code","type":"numeric"}],"height":"800px","dataKey":"d4056071af34493d79b118b2a6e3e63a"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb9" data-code-line-numbers="1|4,11|3-6|10-14|18-22"><pre class="sourceCode numberSource cpp number-lines code-with-copy"><code class="sourceCode cpp"><span id="cb9-1"><a></a><span class="co">/* unités valides pour ce produit */</span></span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a><span class="co">// si produit existe dans le tableau...</span></span>
+<span id="cb9-4"><a></a>produits_unites_tailles_valides<span class="op">.</span>Values<span class="op">.</span>Any<span class="op">(</span>x<span class="op">=&gt;</span></span>
+<span id="cb9-5"><a></a>    x<span class="op">.</span>produit_code <span class="op">==</span> <span class="er">@</span>rowcode</span>
+<span id="cb9-6"><a></a><span class="op">)</span> </span>
+<span id="cb9-7"><a></a></span>
+<span id="cb9-8"><a></a><span class="op">?</span></span>
+<span id="cb9-9"><a></a></span>
+<span id="cb9-10"><a></a><span class="co">// ...n'afficher que les unités</span></span>
+<span id="cb9-11"><a></a>produits_unites_tailles_valides<span class="op">.</span>Values<span class="op">.</span>Any<span class="op">(</span>x<span class="op">=&gt;</span></span>
+<span id="cb9-12"><a></a>    x<span class="op">.</span>produit_code <span class="op">==</span> <span class="er">@</span>rowcode <span class="op">&amp;&amp;</span>   <span class="co">// produit</span></span>
+<span id="cb9-13"><a></a>    x<span class="op">.</span>unite_code <span class="op">==</span> <span class="er">@</span>optioncode     <span class="co">// unité</span></span>
+<span id="cb9-14"><a></a><span class="op">)</span></span>
+<span id="cb9-15"><a></a></span>
+<span id="cb9-16"><a></a><span class="op">:</span></span>
+<span id="cb9-17"><a></a></span>
+<span id="cb9-18"><a></a><span class="co">// sinon, afficher les unités du groupe de produits auquel le produit appartient</span></span>
+<span id="cb9-19"><a></a>produits_unites_tailles_valides<span class="op">.</span>Values<span class="op">.</span>Any<span class="op">(</span>x<span class="op">=&gt;</span></span>
+<span id="cb9-20"><a></a>    x<span class="op">.</span>groupe_code <span class="op">==</span> groupe_alim_1 <span class="op">&amp;&amp;</span> <span class="co">// groupe alimentaire</span></span>
+<span id="cb9-21"><a></a>    x<span class="op">.</span>unite_code <span class="op">==</span> <span class="er">@</span>optioncode     <span class="co">// unité    </span></span>
+<span id="cb9-22"><a></a><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div>
+</section>
+<section id="exercice-avec-les-valeurs" class="slide level2 t3">
+<h2>Exercice avec les valeurs</h2>
+
+<img data-src="assets/langues_benin_togo.png" class="quarto-figure quarto-figure-center r-stretch"><p>Sources: articles Wikipedia <a href="https://fr.wikipedia.org/wiki/Langues_au_B%C3%A9nin">ici</a> et <a href="https://fr.wikipedia.org/wiki/Langues_au_Togo">ici</a>.</p>
+</section>
+<section id="exercice-avec-les-valeurs-1" class="slide level2 t3">
+<h2>Exercice avec les valeurs</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="liste-de-langues-par-pays">Liste de langues par pays …</h3>
+<h4 id="bénin">Bénin</h4>
+<ul>
+<li>Français (1)</li>
+<li>Fon (11)</li>
+<li>Yoruba (12)</li>
+<li>Bariba (13)</li>
+<li>Aja (2)</li>
+</ul>
+<h4 id="togo">Togo</h4>
+<ul>
+<li>Français (1)</li>
+<li>Ewé (21)</li>
+<li>Kabiyé (22)</li>
+<li>Aja (2)</li>
+</ul>
+</div><div class="column fragment" style="width:50%;">
+<!-- -->
+<h3 id="traduite-en-tableau">… traduite en tableau</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>rowcode</th>
+<th>pays</th>
+<th>langue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1</td>
+<td>11</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1</td>
+<td>13</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>2</td>
+<td>21</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>2</td>
+<td>22</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Téléchargeable en format tab <a href="assets/langue_par_pays.tab">ici</a>.</p>
+</div></div>
+</section>
+<section id="exercice-avec-les-valeurs-2" class="slide level2 t3">
+<h2>Exercice avec les valeurs</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="questions-1">Questions</h3>
+<p><strong>1. Où êtes-vous ?</strong></p>
+<p>Bénin…1<br> Togo….2</p>
+<p><strong>2. Quelles langues sont parlées ?</strong></p>
+<p>Français…1<br> Fon…11<br> Yoruba…12<br> Bariba…13<br> Aja…2<br> Ewé…21<br> Kabiyé…22</p>
+</div><div class="column" style="width:50%;">
+<h3 id="instructions-1">Instructions</h3>
+<ul>
+<li>Créer une appli de ces 2 questions</li>
+<li>Importer le tableau de référence
+<ul>
+<li>Soit le créant de toute pièce</li>
+<li>Soit le téléchargeant <a href="assets/langue_par_pays.tab">ici</a></li>
+</ul></li>
+<li>Concevoir une condition de filtre qui affiche les langues pertinentes par choix de pays</li>
+</ul>
+<h4 id="astuces-1">Astuces</h4>
+<ul>
+<li>Adapter des éléments de la syntaxe sur les unités de consommation</li>
+<li>Utiliser <code>@optioncode</code></li>
+</ul>
+</div></div>
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
