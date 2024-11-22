@@ -36,23 +36,23 @@ jobs:
 
       - name: Install R packages need to build site
         uses: r-lib/actions/setup-r-dependencies@v2
-          with:
-            # Quarto installed in setp above
-            install-quarto: false
-            # install packages with pak and all required system dependencies
-            packages: |
-              glue
-              htmltools
-              here
-              gt
-              purrr
-              tibble
-              fs
-              dplyr
-              knitr
-              fontawesome
-              emoji
-              quarto
+        with:
+          # Quarto installed in setp above
+          install-quarto: false
+          # install packages with pak and all required system dependencies
+          packages: |
+            glue
+            htmltools
+            here
+            gt
+            purrr
+            tibble
+            fs
+            dplyr
+            knitr
+            fontawesome
+            emoji
+            quarto
 
       - name: Remove development .gitignore and create deployment one
         run: |
