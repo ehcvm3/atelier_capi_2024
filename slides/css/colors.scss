@@ -52,3 +52,24 @@ $sections:
 .box-grey {
   background-color: #c0c0c0;
 }
+
+$suso: #1c51b7;
+$s1: #170C3AFF; 
+$s2: #500E6CFF; 
+$s3: #86216BFF; 
+$s4: #BB3754FF; 
+$s5: #E65D30FF; 
+$s6: #FB9507FF;
+$s7: #F6D645FF;
+$s8: #F6D645FF;
+$s9: #F6D645FF;
+
+.box-1-faded {
+  background-color: fade-out($s1, 0.5);
+}
+.box-2-faded {
+  background-color: fade-out($s2, 0.5);
+}
+.box-3-faded {
+  background-color: fade-out($s3, 0.5);
+}
