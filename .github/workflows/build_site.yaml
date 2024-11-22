@@ -18,29 +18,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Linux dependencies
-        run: |
-          sudo apt-get install -y make                 
-          sudo apt-get install -y libcurl4-openssl-dev
-          sudo apt-get install -y libssl-dev           
-          sudo apt-get install -y libfontconfig1-dev  
-          sudo apt-get install -y libfreetype6-dev     
-          sudo apt-get install -y libfribidi-dev      
-          sudo apt-get install -y libharfbuzz-dev      
-          sudo apt-get install -y libjpeg-dev         
-          sudo apt-get install -y libpng-dev           
-          sudo apt-get install -y libtiff-dev         
-          sudo apt-get install -y libicu-dev          
-          sudo apt-get install -y pandoc              
-          sudo apt-get install -y libxml2-dev          
-          sudo apt-get install -y libgit2-dev         
-          sudo apt-get install -y libssh2-1-dev        
-          sudo apt-get install -y zlib1g-dev          
-          sudo apt-get install -y git
-
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
+          # use version on dev machine
+          r-version: '4.4.1'
           use-public-rspm: true
 
       # TODO: add this once site works with regular GHA
@@ -52,13 +34,25 @@ jobs:
         with:
           version: 1.5.57
 
-      - name: Install pak
-        run: install.packages("pak")
-        shell: Rscript {0}
-
       - name: Install R packages need to build site
-        run: pak::pak(c("glue", "htmltools", "here", "gt", "purrr", "tibble", "fs", "dplyr", "knitr", "fontawesome", "emoji", "quarto"))
-        shell: Rscript {0}
+        uses: r-lib/actions/setup-r-dependencies@v2
+          with:
+            # Quarto installed in setp above
+            install-quarto: false
+            # install packages with pak and all required system dependencies
+            packages: |
+              glue
+              htmltools
+              here
+              gt
+              purrr
+              tibble
+              fs
+              dplyr
+              knitr
+              fontawesome
+              emoji
+              quarto
 
       - name: Remove development .gitignore and create deployment one
         run: |
