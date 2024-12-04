@@ -161,6 +161,179 @@
     "text": "Contourner : vérifier le respect des limites\n\nLignes de rosterNiveaux d’imbriquationNombre d’éléments\n\n\nLimite : 200 lignes\nVérifions par niveau :\n\nProduits : nombre par groupe de produit largement &lt; 200\nUnités : ~ 40 &lt; 200\nTailles : ~ 5 &lt; 200\n\n\n\nLimite pour les rosters : 4 niveaux\nVérifions notre cas :\n\nNiveau 1 : Produits\nNiveau 2 : Unités\nNiveau 3 : Tailles / relevés\n\n\n\nLimites du nombre d’éléments dans un roster dans un questionnaire : 80 000\n\n\nDimensions\nLignes par niveau :\n\nProduits : 230\nUnités moyennes / produit : 10\nTailles moyennes / unité : 4\n\nObjets par niveau :\n\nProduit : 4\nUnité : 7\nTaille : 3\n\n\n\nCalcul du nombre\n\nNiveau produit : (230 * 4) = 920\nNiveau unité : (230 * 10 * 7) = 16 100\nNiveau taille : (230 * 10 * 4 * 3) = 27 600\nGrand total : 44 620 &lt; 80 000"
   },
   {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#applis-des-éditions-passés",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#applis-des-éditions-passés",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Applis des éditions passés",
+    "text": "Applis des éditions passés\n\n\n\n\nVideo\n\n\n\n\nUne application par groupe de produits\nUne section par produit\nDans chaque section\n\nUn roster pour les unités prévues\nUn roster pour les unités prévue pour d’autres produits du groupe\nUn roster pour les unités non-prévues"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#appli-pour-cette-édition",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#appli-pour-cette-édition",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Appli pour cette édition",
+    "text": "Appli pour cette édition\n\n\n\n\nVideo\n\n\n\n\nUne application qui contient tous les produits\nPour chaque produit, on fait l’inventaire des unités, y compris les nouvelles unités\nPour chaque unité on :\n\nindique les tailles\nprend une photo de l’ensemble des tailles ensemble\n\nPour chaque tailles, prendre un relevé de prix et de poids"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#strate",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#strate",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Strate",
+    "text": "Strate\n\n\n\n\n\n\n\n\n\nVoir le plan d’échantillonage de l’enquête NSU\nRemplacer avec les strates de l’étude (e.g., régions croisées avec milieu)"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#monnaie-si-pertinent",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#monnaie-si-pertinent",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Monnaie (si pertinent)",
+    "text": "Monnaie (si pertinent)\n\n\n\n\n\n\n\n\n\nSi différent de FCFA, modifier le texte à afficher\nLes questions concernant le prix font référence à cette variable"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#tableau-de-référence",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#tableau-de-référence",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Tableau de référence",
+    "text": "Tableau de référence\n\n\n\n\n\n\n\n\n\nOuvrir le panneau des tableaux de référence\nRetrouver produits_unites_tailles_valides\nCliquer sur METTRE À JOUR\nChoisir le fichier de sortie du programme qui crée les tableaux de référence\nCliquer sur SAUVEGARDER"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#produits-par-groupe-de-produits",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#produits-par-groupe-de-produits",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Produits par groupe de produits",
+    "text": "Produits par groupe de produits\n\n\n\n\nVideo\n\n\n\nAjuster les produits\nComment\n\nTous les produits y sont\nSupprimer ceux qui ne feront pas l’objet de l’enquête NSU\n\nOù\n\nInventaire des produits retrouvés au marché (q100_*)\nRoster fixe par groupe de produits"
+  },
+  {
+    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#unités-par-groupe-de-produits",
+    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#unités-par-groupe-de-produits",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Unités par groupe de produits",
+    "text": "Unités par groupe de produits\n\n\n\n\nVideo\n\n\n\n\nNaviguer vers les sorties du programme pour créer le tableau de référence (02_sorties/)\nOuvrir le fichier unites_par_groupe_de_produits.html\nSélectionner Unités par groupe de produits\nNaviguer vers l’appli\nRemplacer les unités à deux endroits\n\nUnités attendues (questoin q101_*), n’oubliant pas\n\n\nles unités autres\n\nAutre 1...........-96\nAutre 2...........-97\nAutre 3...........-98\n\nUnités absentes (roster fixe unites_absentes_*), excluant les unités autres"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-1",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Le jeu entier",
+    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\n\n\n\n\n\n\n\nAu départ\n\nPlusieurs tableaux, en format tab\nDépourvu d’étiquettes\nEn retard :\n\nAnciens numéros\nAnciens produits\n\n\n\n\nEnsuite\n\nUn seul tableau, en format Excel\nAmplifié avec des étiquettes\nActualisé :\n\nRenuméroter les anciens produits\nAjouter les nouveaux produits"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-2",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-2",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Le jeu entier",
+    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\nParfaire le tableau\n\n\nAu départ\n\nAnciens produits actualisés\nCertains nouveaux produits ajoutés\nD’autres produits–absents ou nouveaux–ont une ligne vide\n\nAvec manipulation manuelle\n\nCorriger / élargir les unités\nRemplir les lacunes\n\nEnfin\n\nTableau complet"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-3",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-3",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Le jeu entier",
+    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\nParfaire le tableau\n\n\nSauvegarder sous format SuSo\n\n\nAu départ\nTableau :\n\nManuellement manipulé\nAvec des textes\n\nD’abord\nVérifier le contenu :\n\nTous les produits y sont\nToutes les lignes sont bien remplises\n\nEnsuite\n\nPréparer le contenu pour SuSo\nSauvegarder sous format tab"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#paramétrage-préliminaires",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#paramétrage-préliminaires",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Paramétrage préliminaires",
+    "text": "Paramétrage préliminaires\n\n Obtenir le programme\n\n\n Télécharger les anciens tableaux de l’EHCVM\n\n\n Obtenir le questionnaire EHCVM en format JSON\n\n\n Copier-coller le questionnaire Excel de l’EHCVM"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-programme",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-programme",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Obtenir le programme",
+    "text": "Obtenir le programme\n\n\n\n\nVideo\n\n\n\n\nSi vous n’avez pas Git,\n\nRetrouver l’organisation GitHub pour l’EHCVM3 : https://github.com/ehcvm3\nRetrouver le répositoire du programme : creer_tableau_produit_unite_taille\nCliquer sur le bouton Code\nSélectionner Download ZIP depuis la liste déroulante\nDécomprimer dans / vers le dossier voulu\n\nSi vous avez Git, suivre les instructions ici."
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#télécharger-les-anciens-tableaux-de-lehcvm",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#télécharger-les-anciens-tableaux-de-lehcvm",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Télécharger les anciens tableaux de l’EHCVM",
+    "text": "Télécharger les anciens tableaux de l’EHCVM\n\n\n\n\nVideo\n\n\n\nPour actualiser les tableaux, il faut les chercher dans le questionnaire de l’édition passée :\n\nRetrouver le questionnaire CAPI chez Designer\nTélécharger les tableaux de référence qui traite des produits-unités-tailles valides\n\nL’on devrait s’attendre à télécharger 11 fichiers."
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-questionnaire-ehcvm2-en-format-json",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-questionnaire-ehcvm2-en-format-json",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Obtenir le questionnaire EHCVM2 en format JSON",
+    "text": "Obtenir le questionnaire EHCVM2 en format JSON\n\n\n\n\nVideo\n\n\n\nDeux méthodes pour localiser ce fichier (i.e., document.json) :\n\nChercher dans les fichiers d’exportation de l’EHCVM2.\nImporter les questionnaire dans un serveur et exporter les données avec métadonnées.\n\nAprès obtention, sauvegarder dans 01_entrees/ehcvm2/"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#copier-coller-le-questionnaire-excel-de-lehcvm",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#copier-coller-le-questionnaire-excel-de-lehcvm",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": " Copier-coller le questionnaire Excel de l’EHCVM",
+    "text": "Copier-coller le questionnaire Excel de l’EHCVM\n\n\n\n\nVideo\n\n\n\nComme le questionnaire CAPI peut ne pas être à jour, on exploitera la version Excel.\nPour ce faire :\n\nSauvegarder la version pays\nSauvegarder sous format xlsx, xlsm, ou xls dans le dossier 01_entrees/ehcvm3/"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#créer-un-tableau-excel-et-un-compilation-de-code",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#créer-un-tableau-excel-et-un-compilation-de-code",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Créer un tableau Excel et un compilation de code",
+    "text": "Créer un tableau Excel et un compilation de code\n\n\n\n\nVideo\n\n\n\nLancer le script\n\n\nVoir la procédure\n\n\nDouble-cliquer sur le fichier .Rproj\nOuvrir 01_creer_tableau_excel.R\nCliquer sur le bouton Source pour lancer\n\n\nVoir les sorties\n\nNaviguer vers 01_sorties/\nConstater les\n\n\ndeux sorties du script\n\n\ntableau_de_ref_ehcvm3.xlsx, une représentation aisément lisible et modifiable de la concaténation des tableaux de référence\nunites_par_groupe_de_produits.html, une compilation des unités pour consulter et copier-coller lors de la prochaine phase de travail"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#tableau-excel",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#tableau-excel",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Tableau Excel",
+    "text": "Tableau Excel\n\n\n\n\n\n\n\n\nContenu\n\nUn seul tableau\nAmplifié avec des étiquettes\n\n\nActualisé\n\n\nAnciens produits renumérotés\nNouveaux produits ajoutés\n\n\n\nColonnes\n\nCodes. Valeur retenue dans les applis ménage et NSU. À respecter.\nTexte. Étiquette fournie uniquement pour faciliter la modification manuelle."
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#compilation-dunités",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#compilation-dunités",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Compilation d’unités",
+    "text": "Compilation d’unités\n\n\n\n\nVideo\n\n\n\nUtilité\nLors de la modification manuelle\n\nRetrouver une unité et/ou son code\nVoir les unités pour d’autres produits du groupe alimentaire\n\nLors de l’adaptation des applis\n\nCopier-coller les modalités"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#parfaire-le-tableau-1",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#parfaire-le-tableau-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Parfaire le tableau",
+    "text": "Parfaire le tableau\n\n\n\n\nVideo\n\n\n\n\nRemplir les lacunes (e.g., nouveaux produits, anciens produits sans unité)\nAjuster les unités ici et là (e.g. refletter des trouvailles de la dernière enquête ménage, anticiper les unités de l’enquête NSU)\nSauvegarder dans le même fichier créé par le programme"
+  },
+  {
+    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#sauvegarder-sous-format-suso-1",
+    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#sauvegarder-sous-format-suso-1",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "Sauvegarder sous format SuSo",
+    "text": "Sauvegarder sous format SuSo\n\n\n\n\nVideo\n\n\n\nLancer le script\n\n\nVoir la procédure\n\n\nDouble-cliquer sur le fichier .Rproj\nOuvrir 02_creer_tableau_tab.R\nCliquer sur le bouton Source pour lancer\n\n\nRéagir aux messages et corriger\n\n\n\nErreurs\n\n\nColonnes devraient avoir un contenu numérique\nTous les groupes de produit y sont\nAucun contenu vide (e.g., produit_code, unite_code, etc)\n\n\n\n\nAvertissements\n\n\nProduits dont le nom n’est pas adapté au contexte pays"
+  },
+  {
+    "objectID": "agenda.html",
+    "href": "agenda.html",
+    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
+    "section": "",
+    "text": "Agenda des séances\n\n\nAvec des liens vers les page de leçon, les diapos, et les exercices\n\n\nSéance\nLeçon\nDiapos\nExercices\n\n\n\n\nJours 3 : mercredi 27 novembre\n\n\nRosters imbriqués\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJours 4 : jeudi 28 novembre\n\n\nTableaux de référence\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCréer un tableau des produits-unités-tailles\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdapter l'application NSU"
+  },
+  {
+    "objectID": "pre-requis/02_progs_01_programmes.html",
+    "href": "pre-requis/02_progs_01_programmes.html",
+    "title": "Programmes à installer",
+    "section": "",
+    "text": "R\nRTools\nRStudio",
+    "crumbs": [
+      "Pré-requis",
+      "Programmes",
+      "Programmes à installer"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "atelier_capi_2024",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
     "objectID": "slides/tableaux_de_reference/tableaux_de_reference.html#plan-de-la-présentation",
     "href": "slides/tableaux_de_reference/tableaux_de_reference.html#plan-de-la-présentation",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
@@ -301,176 +474,94 @@
     "text": "Exercice avec les valeurs\n\n\nQuestions\n1. Où êtes-vous ?\nBénin…1 Togo….2\n2. Quelles langues sont parlées ?\nFrançais…1 Fon…11 Yoruba…12 Bariba…13 Aja…2 Ewé…21 Kabiyé…22\n\nInstructions\n\nCréer une appli de ces 2 questions\nImporter le tableau de référence\n\nSoit le créant de toute pièce\nSoit le téléchargeant ici\n\nConcevoir une condition de filtre qui affiche les langues pertinentes par choix de pays\n\nAstuces\n\nAdapter des éléments de la syntaxe sur les unités de consommation\nUtiliser @optioncode"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "atelier_capi_2024",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "pre-requis/02_progs_01_programmes.html",
-    "href": "pre-requis/02_progs_01_programmes.html",
-    "title": "Programmes à installer",
-    "section": "",
-    "text": "R\nRTools\nRStudio",
-    "crumbs": [
-      "Pré-requis",
-      "Programmes",
-      "Programmes à installer"
-    ]
-  },
-  {
-    "objectID": "agenda.html",
-    "href": "agenda.html",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#problèmes",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#problèmes",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "",
-    "text": "Agenda des séances\n\n\nAvec des liens vers les page de leçon, les diapos, et les exercices\n\n\nSéance\nLeçon\nDiapos\nExercices\n\n\n\n\nJours 3 : mercredi 27 novembre\n\n\nRosters imbriqués\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJours 4 : jeudi 28 novembre\n\n\nTableaux de référence\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCréer un tableau des produits-unités-tailles\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdapter l'application NSU"
+    "section": "Problèmes",
+    "text": "Problèmes\n\n\nQuantité\n\nFomulaires pas remis\nPeu de relevés par strate-produit-unité\n\n\n\nQualité\n\nUnité autre correspond à une unité prévue\nIncohérence dans les relevés\nTrucage des photos\nValeurs extrêmes/invraisemblable"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-1",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-1",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#solution",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#solution",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Le jeu entier",
-    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\n\n\n\n\n\n\n\nAu départ\n\nPlusieurs tableaux, en format tab\nDépourvu d’étiquettes\nEn retard :\n\nAnciens numéros\nAnciens produits\n\n\n\n\nEnsuite\n\nUn seul tableau, en format Excel\nAmplifié avec des étiquettes\nActualisé :\n\nRenuméroter les anciens produits\nAjouter les nouveaux produits"
+    "section": "Solution",
+    "text": "Solution\n\n\nObtenir\n\nTélécharger des données (i.e., chiffres, images)\nFusionner de différentes bases\nOrganiser des images\n\n\nValider\n\nValeurs extrêmes/invraisemblable\nIncohérences\nTrucage\n\n\nSignaler\n\nRecommendation d’action\nRapport sur les lacunes ou les déficits de données"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-2",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-2",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-2",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-2",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Le jeu entier",
-    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\nParfaire le tableau\n\n\nAu départ\n\nAnciens produits actualisés\nCertains nouveaux produits ajoutés\nD’autres produits–absents ou nouveaux–ont une ligne vide\n\nAvec manipulation manuelle\n\nCorriger / élargir les unités\nRemplir les lacunes\n\nEnfin\n\nTableau complet"
+    "section": "Obtenir",
+    "text": "Obtenir\n\n\nmes/fichiers/exportes/\n├── assignment__actions.dta\n├── boissons.dta\n├── cereales.dta\n├── ehcvm3_nsu.dta\n├── epices.dta\n├── export__readme.txt\n├── fruits.dta\n├── huiles.dta\n├── interview__actions.dta\n├── interview__comments.dta\n├── interview__diagnostics.dta      \n├── interview__errors.dta\n├── laitier.dta\n├── legumes.dta\n├── leg_tub.dta\n├── poissons.dta\n├── Questionnaire\n├── sucreries.dta\n├── tailles_boissons.dta\n├── tailles_cereales.dta\n├── tailles_epices.dta\n├── tailles_fruits.dta\n├── tailles_huiles.dta\n├── tailles_laitier.dta\n├── tailles_legumes.dta\n├── tailles_leg_tub.dta\n├── tailles_poissons.dta\n├── tailles_sucreries.dta\n├── tailles_viandes.dta\n├── unites_absentes_boissons.dta\n├── unites_absentes_cereales.dta\n├── unites_absentes_epices.dta\n├── unites_absentes_fruits.dta\n├── unites_absentes_huiles.dta\n├── unites_absentes_laitier.dta\n├── unites_absentes_legumes.dta\n├── unites_absentes_leg_tub.dta\n├── unites_absentes_poissons.dta\n├── unites_absentes_sucreries.dta\n├── unites_absentes_viandes.dta\n├── unites_boissons.dta\n├── unites_cereales.dta\n├── unites_epices.dta\n├── unites_fruits.dta\n├── unites_huiles.dta\n├── unites_laitier.dta\n├── unites_legumes.dta\n├── unites_leg_tub.dta\n├── unites_poissons.dta\n├── unites_sucreries.dta\n├── unites_viandes.dta\n└── viandes.dta\n\n\nPlusieurs versions de l’appli (potentiellement)\n50 fichiers de données\nDifférents niveaux d’observation\nVariables à renommer\nÉtiquettes de valeurs à fusionner\nBase unique à créer"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-3",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#le-jeu-entier-3",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-3",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-3",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Le jeu entier",
-    "text": "Le jeu entier\n\n\n\nCréer un tableau aisément modifiable\n\n\nParfaire le tableau\n\n\nSauvegarder sous format SuSo\n\n\nAu départ\nTableau :\n\nManuellement manipulé\nAvec des textes\n\nD’abord\nVérifier le contenu :\n\nTous les produits y sont\nToutes les lignes sont bien remplises\n\nEnsuite\n\nPréparer le contenu pour SuSo\nSauvegarder sous format tab"
+    "section": "Obtenir",
+    "text": "Obtenir\n\n\nmes/images/exportees/\n├── boisson_vd_1_Binary_All\n├── CEREALES_PAINS_VD_1_Binary_All\n├── epice_vd_1_Binary_All\n├── fruit_vd_1_Binary_All (1)\n├── huile_vd_1_Binary_All (1)\n├── lait_vd_1_Binary_All\n├── legume_vd_1_Binary_All\n├── legumu_tub_vd_1_Binary_All\n├── poisson_vd_1_Binary_All\n├── sucre_vd_1_Binary_All\n├── viande_vd_1_Binary_All\n\nRight column"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#paramétrage-préliminaires",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#paramétrage-préliminaires",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-4",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-4",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Paramétrage préliminaires",
-    "text": "Paramétrage préliminaires\n\n Obtenir le programme\n\n\n Télécharger les anciens tableaux de l’EHCVM\n\n\n Obtenir le questionnaire EHCVM en format JSON\n\n\n Copier-coller le questionnaire Excel de l’EHCVM"
+    "section": "Obtenir",
+    "text": "Obtenir\n\n\nmes/images/exportees/groupe1/\n├── 09-87-67-93\n├── 11-31-97-21\n├── 12-21-14-10\n├── 22-79-50-33\n├── 24-65-40-56\n├── 35-94-45-38\n├── 36-49-47-51\n├── 37-58-32-39\n├── 41-84-75-59\n├── 43-00-28-27\n├── 55-16-58-34\n├── 60-21-85-33\n├── 75-89-52-89\n├── 76-66-95-72\n├── 84-98-68-72\n├── 85-01-06-41\n├── 93-37-66-96\n└── 98-31-26-00\n\nRight column"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-programme",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-programme",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-5",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-5",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": " Obtenir le programme",
-    "text": "Obtenir le programme\n\n\n\n\nVideo\n\n\n\n\nSi vous n’avez pas Git,\n\nRetrouver l’organisation GitHub pour l’EHCVM3 : https://github.com/ehcvm3\nRetrouver le répositoire du programme : creer_tableau_produit_unite_taille\nCliquer sur le bouton Code\nSélectionner Download ZIP depuis la liste déroulante\nDécomprimer dans / vers le dossier voulu\n\nSi vous avez Git, suivre les instructions ici."
+    "section": "Obtenir",
+    "text": "Obtenir\n\n\nmes/images/exportees/groupe1/\n├── 09-87-67-93\n│   ├── q109_bieindus___113.jpg\n│   ├── q109_boisgaz___113.jpg\n│   ├── q109_cafepoud___107.jpg\n│   ├── q109_cafepoud___139.jpg\n│   ├── q109_cafesol___139.jpg\n│   ├── q109_chocpoud___139.jpg\n│   ├── q109_eauminfi___113.jpg\n│   ├── q109_eauminfi___139.jpg\n│   ├── q109_juspoud___139.jpg\n│   ├── q109_the___129.jpg\n│   ├── q109_the___139.jpg\n│   ├── q109_vbietrad___113.jpg\n│   └── q109_vbietrad___115.jpg\n├── 11-31-97-21\n│   ├── q109_bieindus___113.jpg\n│   ├── q109_boisgaz___113.jpg\n│   ├── q109_cafesol___107.jpg\n│   ├── q109_cafesol___139.jpg\n│   ├── q109_chocpoud___139.jpg\n│   ├── q109_eauminfi___113.jpg\n│   ├── q109_eauminfi___139.jpg\n│   ├── q109_jusfruit___106.jpg\n│   ├── q109_jusfruit___139.jpg\n│   ├── q109_the___129.jpg\n│   ├── q109_the___139.jpg\n│   ├── q109_vbietrad___106.jpg\n│   └── q109_vbietrad___115.jpg\n├── 12-21-14-10\n├── 22-79-50-33\n├── 24-65-40-56\n├── 35-94-45-38\n├── 36-49-47-51\n├── 37-58-32-39\n├── 41-84-75-59\n├── 43-00-28-27\n├── 55-16-58-34\n├── 60-21-85-33\n├── 75-89-52-89\n├── 76-66-95-72\n├── 84-98-68-72\n├── 85-01-06-41\n├── 93-37-66-96\n└── 98-31-26-00\n\nRight column"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#télécharger-les-anciens-tableaux-de-lehcvm",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#télécharger-les-anciens-tableaux-de-lehcvm",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-6",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#obtenir-6",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": " Télécharger les anciens tableaux de l’EHCVM",
-    "text": "Télécharger les anciens tableaux de l’EHCVM\n\n\n\n\nVideo\n\n\n\nPour actualiser les tableaux, il faut les chercher dans le questionnaire de l’édition passée :\n\nRetrouver le questionnaire CAPI chez Designer\nTélécharger les tableaux de référence qui traite des produits-unités-tailles valides\n\nL’on devrait s’attendre à télécharger 11 fichiers."
+    "section": "Obtenir",
+    "text": "Obtenir\n\n\nDonnées\n\nFusionnées en une base unique\nÉtiquettetés\n\n\nImages\n\nReclassées par produit-unité\nRenommées pour intégrer l’entretien à laquelle l’image apartient"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-questionnaire-ehcvm2-en-format-json",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#obtenir-le-questionnaire-ehcvm2-en-format-json",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#unité-autre-correspond-à-une-unité-prévue",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#unité-autre-correspond-à-une-unité-prévue",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": " Obtenir le questionnaire EHCVM2 en format JSON",
-    "text": "Obtenir le questionnaire EHCVM2 en format JSON\n\n\n\n\nVideo\n\n\n\nDeux méthodes pour localiser ce fichier (i.e., document.json) :\n\nChercher dans les fichiers d’exportation de l’EHCVM2.\nImporter les questionnaire dans un serveur et exporter les données avec métadonnées.\n\nAprès obtention, sauvegarder dans 01_entrees/ehcvm2/"
+    "section": "Unité autre correspond à une unité prévue",
+    "text": "Unité autre correspond à une unité prévue\n\n\n\nUnite\n\n\n\n\nGrand tas"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#copier-coller-le-questionnaire-excel-de-lehcvm",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#copier-coller-le-questionnaire-excel-de-lehcvm",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#incohérence-dans-les-relevés",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#incohérence-dans-les-relevés",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": " Copier-coller le questionnaire Excel de l’EHCVM",
-    "text": "Copier-coller le questionnaire Excel de l’EHCVM\n\n\n\n\nVideo\n\n\n\nComme le questionnaire CAPI peut ne pas être à jour, on exploitera la version Excel.\nPour ce faire :\n\nSauvegarder la version pays\nSauvegarder sous format xlsx, xlsm, ou xls dans le dossier 01_entrees/ehcvm3/"
+    "section": "Incohérence dans les relevés",
+    "text": "Incohérence dans les relevés\n\n\n\nunites\ntailles\npoids\n\n\n\n\nTas\nPetit\n1\n\n\nTas\nMoyen\n0.5\n\n\nTas\nGrand\n1.5"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#créer-un-tableau-excel-et-un-compilation-de-code",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#créer-un-tableau-excel-et-un-compilation-de-code",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#trucage-des-photos",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#trucage-des-photos",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Créer un tableau Excel et un compilation de code",
-    "text": "Créer un tableau Excel et un compilation de code\n\n\n\n\nVideo\n\n\n\nLancer le script\n\n\nVoir la procédure\n\n\nDouble-cliquer sur le fichier .Rproj\nOuvrir 01_creer_tableau_excel.R\nCliquer sur le bouton Source pour lancer\n\n\nVoir les sorties\n\nNaviguer vers 01_sorties/\nConstater les\n\n\ndeux sorties du script\n\n\ntableau_de_ref_ehcvm3.xlsx, une représentation aisément lisible et modifiable de la concaténation des tableaux de référence\nunites_par_groupe_de_produits.html, une compilation des unités pour consulter et copier-coller lors de la prochaine phase de travail"
+    "section": "Trucage des photos",
+    "text": "Trucage des photos\n\n\nCas 1 : utiliser la même photo\n\nComparer l’empreinte digitale des photos (e.g. md5sum)\n\n\nCas 2 : prendre la même chose en photo\n\nAfficher toutes les photos de l’unité choisie dans le même marché"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#tableau-excel",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#tableau-excel",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#valeurs-extrêmesinvraisemblable",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#valeurs-extrêmesinvraisemblable",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Tableau Excel",
-    "text": "Tableau Excel\n\n\n\n\n\n\n\n\nContenu\n\nUn seul tableau\nAmplifié avec des étiquettes\n\n\nActualisé\n\n\nAnciens produits renumérotés\nNouveaux produits ajoutés\n\n\n\nColonnes\n\nCodes. Valeur retenue dans les applis ménage et NSU. À respecter.\nTexte. Étiquette fournie uniquement pour faciliter la modification manuelle."
+    "section": "Valeurs extrêmes/invraisemblable",
+    "text": "Valeurs extrêmes/invraisemblable"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#compilation-dunités",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#compilation-dunités",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#recommendation-daction",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#recommendation-daction",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Compilation d’unités",
-    "text": "Compilation d’unités\n\n\n\n\nVideo\n\n\n\nUtilité\nLors de la modification manuelle\n\nRetrouver une unité et/ou son code\nVoir les unités pour d’autres produits du groupe alimentaire\n\nLors de l’adaptation des applis\n\nCopier-coller les modalités"
+    "section": "Recommendation d’action",
+    "text": "Recommendation d’action\nRejeter les formulaires avec problèmes ?"
   },
   {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#parfaire-le-tableau-1",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#parfaire-le-tableau-1",
+    "objectID": "slides/nsu_controle_qualite/nsu_controle_qualite.html#rapport",
+    "href": "slides/nsu_controle_qualite/nsu_controle_qualite.html#rapport",
     "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Parfaire le tableau",
-    "text": "Parfaire le tableau\n\n\n\n\nVideo\n\n\n\n\nRemplir les lacunes (e.g., nouveaux produits, anciens produits sans unité)\nAjuster les unités ici et là (e.g. refletter des trouvailles de la dernière enquête ménage, anticiper les unités de l’enquête NSU)\nSauvegarder dans le même fichier créé par le programme"
-  },
-  {
-    "objectID": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#sauvegarder-sous-format-suso-1",
-    "href": "slides/creer_tableau_unites_taillles/creer_tableau_unites_tailles.html#sauvegarder-sous-format-suso-1",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Sauvegarder sous format SuSo",
-    "text": "Sauvegarder sous format SuSo\n\n\n\n\nVideo\n\n\n\nLancer le script\n\n\nVoir la procédure\n\n\nDouble-cliquer sur le fichier .Rproj\nOuvrir 02_creer_tableau_tab.R\nCliquer sur le bouton Source pour lancer\n\n\nRéagir aux messages et corriger\n\n\n\nErreurs\n\n\nColonnes devraient avoir un contenu numérique\nTous les groupes de produit y sont\nAucun contenu vide (e.g., produit_code, unite_code, etc)\n\n\n\n\nAvertissements\n\n\nProduits dont le nom n’est pas adapté au contexte pays"
-  },
-  {
-    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#applis-des-éditions-passés",
-    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#applis-des-éditions-passés",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Applis des éditions passés",
-    "text": "Applis des éditions passés\n\n\n\n\nVideo\n\n\n\n\nUne application par groupe de produits\nUne section par produit\nDans chaque section\n\nUn roster pour les unités prévues\nUn roster pour les unités prévue pour d’autres produits du groupe\nUn roster pour les unités non-prévues"
-  },
-  {
-    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#appli-pour-cette-édition",
-    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#appli-pour-cette-édition",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Appli pour cette édition",
-    "text": "Appli pour cette édition\n\n\n\n\nVideo\n\n\n\n\nUne application qui contient tous les produits\nPour chaque produit, on fait l’inventaire des unités, y compris les nouvelles unités\nPour chaque unité on :\n\nindique les tailles\nprend une photo de l’ensemble des tailles ensemble\n\nPour chaque tailles, prendre un relevé de prix et de poids"
-  },
-  {
-    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#strate",
-    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#strate",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Strate",
-    "text": "Strate\n\n\n\n\n\n\n\n\n\nVoir le plan d’échantillonage de l’enquête NSU\nRemplacer avec les strates de l’étude (e.g., régions croisées avec milieu)"
-  },
-  {
-    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#monnaie-si-pertinent",
-    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#monnaie-si-pertinent",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Monnaie (si pertinent)",
-    "text": "Monnaie (si pertinent)\n\n\n\n\n\n\n\n\n\nSi différent de FCFA, modifier le texte à afficher\nLes questions concernant le prix font référence à cette variable"
-  },
-  {
-    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#tableau-de-référence",
-    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#tableau-de-référence",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Tableau de référence",
-    "text": "Tableau de référence\n\n\n\n\n\n\n\n\n\nOuvrir le panneau des tableaux de référence\nRetrouver produits_unites_tailles_valides\nCliquer sur METTRE À JOUR\nChoisir le fichier de sortie du programme qui crée les tableaux de référence\nCliquer sur SAUVEGARDER"
-  },
-  {
-    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#produits-par-groupe-de-produits",
-    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#produits-par-groupe-de-produits",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Produits par groupe de produits",
-    "text": "Produits par groupe de produits\n\n\n\n\nVideo\n\n\n\nAjuster les produits\nComment\n\nTous les produits y sont\nSupprimer ceux qui ne feront pas l’objet de l’enquête NSU\n\nOù\n\nInventaire des produits retrouvés au marché (q100_*)\nRoster fixe par groupe de produits"
-  },
-  {
-    "objectID": "slides/adapter_appli_nsu/adapter_appli_nsu.html#unités-par-groupe-de-produits",
-    "href": "slides/adapter_appli_nsu/adapter_appli_nsu.html#unités-par-groupe-de-produits",
-    "title": "Atelier de renforcement de capacité et d'adaptation CAPI 2024",
-    "section": "Unités par groupe de produits",
-    "text": "Unités par groupe de produits\n\n\n\n\nVideo\n\n\n\n\nNaviguer vers les sorties du programme pour créer le tableau de référence (02_sorties/)\nOuvrir le fichier unites_par_groupe_de_produits.html\nSélectionner Unités par groupe de produits\nNaviguer vers l’appli\nRemplacer les unités à deux endroits\n\nUnités attendues (questoin q101_*), n’oubliant pas\n\n\nles unités autres\n\nAutre 1...........-96\nAutre 2...........-97\nAutre 3...........-98\n\nUnités absentes (roster fixe unites_absentes_*), excluant les unités autres"
+    "section": "Rapport",
+    "text": "Rapport\n\n\nLacunes\n\n\n\nMarché\nFormulaire (N)\n\n\n\n\nMarché 1\n2\n\n\nMarché 2\n3\n\n\nMarché 3\n1\n\n\nMarché 4\n3\n\n\n\nAttendre 3 formulaires par marché.\n\nDéficits\n\n\n\nStrate\nProduit\nUnité\nTaille\nRelevés\n\n\n\n\nStrate 1\nTomates\nTas\nPetit\n6\n\n\nStrate 2\nTomates\nTas\nMoyen\n10\n\n\nStrate 3\nTomates\nTas\nGrand\n3\n\n\n\nIl y a un minimum de relevés par strate pour calculer un facteur de conversion fiable. Le tableau cherche à mettre en relief les strates-produits-unités-tailles où l’on a trop peu d’observations."
   }
 ]
