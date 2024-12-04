@@ -1,0 +1,385 @@
+---
+format: 
+    revealjs: 
+        theme: [default, ../css/core.scss, ../css/colors.scss]
+        height: 900
+        width: 1600
+execute: 
+  eval: false
+  echo: true
+---
+
+# Système de contrôle-qualité des données NSU {background-color=var(--suso)}
+
+## Problèmes {.t1}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Quantité
+
+- Fomulaires pas remis
+- Peu de relevés par strate-produit-unité
+
+:::
+
+::: {.column width="50%" .fragment}
+
+### Qualité
+
+- Unité autre correspond à une unité prévue
+- Incohérence dans les relevés
+- Trucage des photos
+- Valeurs extrêmes/invraisemblable
+
+:::
+
+::::
+
+## Solution {.t1}
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+### Obtenir
+
+- Télécharger des données (i.e., chiffres, images)
+- Fusionner de différentes bases
+- Organiser des images
+
+:::
+
+::: {.column width="33%"}
+
+### Valider
+
+- Valeurs extrêmes/invraisemblable
+- Incohérences
+- Trucage
+
+:::
+
+::: {.column width="33%"}
+
+### Signaler
+
+- Recommendation d'action
+- Rapport sur les lacunes ou les déficits de données
+
+:::
+
+::::
+
+# Obtenir {background-color=var(--s1)}
+
+## Obtenir {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```txt
+mes/fichiers/exportes/
+├── assignment__actions.dta
+├── boissons.dta
+├── cereales.dta
+├── ehcvm3_nsu.dta
+├── epices.dta
+├── export__readme.txt
+├── fruits.dta
+├── huiles.dta
+├── interview__actions.dta
+├── interview__comments.dta
+├── interview__diagnostics.dta      
+├── interview__errors.dta
+├── laitier.dta
+├── legumes.dta
+├── leg_tub.dta
+├── poissons.dta
+├── Questionnaire
+├── sucreries.dta
+├── tailles_boissons.dta
+├── tailles_cereales.dta
+├── tailles_epices.dta
+├── tailles_fruits.dta
+├── tailles_huiles.dta
+├── tailles_laitier.dta
+├── tailles_legumes.dta
+├── tailles_leg_tub.dta
+├── tailles_poissons.dta
+├── tailles_sucreries.dta
+├── tailles_viandes.dta
+├── unites_absentes_boissons.dta
+├── unites_absentes_cereales.dta
+├── unites_absentes_epices.dta
+├── unites_absentes_fruits.dta
+├── unites_absentes_huiles.dta
+├── unites_absentes_laitier.dta
+├── unites_absentes_legumes.dta
+├── unites_absentes_leg_tub.dta
+├── unites_absentes_poissons.dta
+├── unites_absentes_sucreries.dta
+├── unites_absentes_viandes.dta
+├── unites_boissons.dta
+├── unites_cereales.dta
+├── unites_epices.dta
+├── unites_fruits.dta
+├── unites_huiles.dta
+├── unites_laitier.dta
+├── unites_legumes.dta
+├── unites_leg_tub.dta
+├── unites_poissons.dta
+├── unites_sucreries.dta
+├── unites_viandes.dta
+└── viandes.dta
+```
+
+
+:::
+
+::: {.column width="30%"}
+
+- Plusieurs versions de l'appli (potentiellement)
+- 50 fichiers de données
+- Différents niveaux d'observation
+- Variables à renommer
+- Étiquettes de valeurs à fusionner
+- Base unique à créer
+
+:::
+
+::::
+
+## Obtenir {.t2}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```txt
+mes/images/exportees/
+├── boisson_vd_1_Binary_All
+├── CEREALES_PAINS_VD_1_Binary_All
+├── epice_vd_1_Binary_All
+├── fruit_vd_1_Binary_All (1)
+├── huile_vd_1_Binary_All (1)
+├── lait_vd_1_Binary_All
+├── legume_vd_1_Binary_All
+├── legumu_tub_vd_1_Binary_All
+├── poisson_vd_1_Binary_All
+├── sucre_vd_1_Binary_All
+├── viande_vd_1_Binary_All
+```
+
+:::
+
+::: {.column width="30%"}
+Right column
+:::
+
+::::
+
+## Obtenir {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```txt
+mes/images/exportees/groupe1/
+├── 09-87-67-93
+├── 11-31-97-21
+├── 12-21-14-10
+├── 22-79-50-33
+├── 24-65-40-56
+├── 35-94-45-38
+├── 36-49-47-51
+├── 37-58-32-39
+├── 41-84-75-59
+├── 43-00-28-27
+├── 55-16-58-34
+├── 60-21-85-33
+├── 75-89-52-89
+├── 76-66-95-72
+├── 84-98-68-72
+├── 85-01-06-41
+├── 93-37-66-96
+└── 98-31-26-00
+```
+
+:::
+
+::: {.column width="30%"}
+Right column
+:::
+
+::::
+
+## Obtenir {.t1}
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```txt
+mes/images/exportees/groupe1/
+├── 09-87-67-93
+│   ├── q109_bieindus___113.jpg
+│   ├── q109_boisgaz___113.jpg
+│   ├── q109_cafepoud___107.jpg
+│   ├── q109_cafepoud___139.jpg
+│   ├── q109_cafesol___139.jpg
+│   ├── q109_chocpoud___139.jpg
+│   ├── q109_eauminfi___113.jpg
+│   ├── q109_eauminfi___139.jpg
+│   ├── q109_juspoud___139.jpg
+│   ├── q109_the___129.jpg
+│   ├── q109_the___139.jpg
+│   ├── q109_vbietrad___113.jpg
+│   └── q109_vbietrad___115.jpg
+├── 11-31-97-21
+│   ├── q109_bieindus___113.jpg
+│   ├── q109_boisgaz___113.jpg
+│   ├── q109_cafesol___107.jpg
+│   ├── q109_cafesol___139.jpg
+│   ├── q109_chocpoud___139.jpg
+│   ├── q109_eauminfi___113.jpg
+│   ├── q109_eauminfi___139.jpg
+│   ├── q109_jusfruit___106.jpg
+│   ├── q109_jusfruit___139.jpg
+│   ├── q109_the___129.jpg
+│   ├── q109_the___139.jpg
+│   ├── q109_vbietrad___106.jpg
+│   └── q109_vbietrad___115.jpg
+├── 12-21-14-10
+├── 22-79-50-33
+├── 24-65-40-56
+├── 35-94-45-38
+├── 36-49-47-51
+├── 37-58-32-39
+├── 41-84-75-59
+├── 43-00-28-27
+├── 55-16-58-34
+├── 60-21-85-33
+├── 75-89-52-89
+├── 76-66-95-72
+├── 84-98-68-72
+├── 85-01-06-41
+├── 93-37-66-96
+└── 98-31-26-00
+```
+
+:::
+
+::: {.column width="30%"}
+Right column
+:::
+
+::::
+
+## Obtenir {.t1}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Données
+
+- Fusionnées en une base unique
+- Étiquettetés
+
+:::
+
+::: {.column width="50%"}
+
+### Images
+
+- Reclassées par produit-unité
+- Renommées pour intégrer l'entretien à laquelle l'image apartient
+
+:::
+
+::::
+
+# Valider {background-color=var(--s2)}
+
+## Unité autre correspond à une unité prévue {.t2}
+
+| Unite |
+| --------- |
+| Grand tas |
+
+## Incohérence dans les relevés {.t2}
+
+| unites | tailles | poids |
+| ------ | ------- | ----- |
+| Tas    | Petit   | 1     |  
+| Tas    | Moyen   | 0.5   |
+| Tas    | Grand   | 1.5   |
+
+## Trucage des photos {.t2}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Cas 1 : utiliser la même photo
+
+- Comparer l'empreinte digitale des photos (e.g. md5sum)
+
+:::
+
+::: {.column width="50%"}
+
+### Cas 2 : prendre la même chose en photo
+
+- Afficher toutes les photos de l'unité choisie dans le même marché
+
+:::
+
+::::
+
+## Valeurs extrêmes/invraisemblable {.t2}
+
+# Obtenir {background-color=var(--s3)}
+
+## Recommendation d'action {.t3}
+
+Rejeter les formulaires avec problèmes ?
+
+## Rapport {.t3}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Lacunes
+
+| Marché | Formulaire (N) |
+| ------ | -------------- |
+| Marché 1 | 2 |
+| Marché 2 | 3 |
+| Marché 3 | 1 |
+| Marché 4 | 3 |
+
+Attendre 3 formulaires par marché.
+
+:::
+
+::: {.column width="50%"}
+
+### Déficits
+
+| Strate | Produit | Unité | Taille | Relevés |
+| ------ | ------- | ----- | ------ | ------- |
+| Strate 1 | Tomates | Tas | Petit | 6 |
+| Strate 2 | Tomates | Tas | Moyen | 10 |
+| Strate 3 | Tomates | Tas | Grand | 3 |
+
+Il y a un minimum de relevés par strate pour calculer un facteur de conversion fiable. Le tableau cherche à mettre en relief les strates-produits-unités-tailles où l'on a trop peu d'observations.
+
+:::
+
+::::
