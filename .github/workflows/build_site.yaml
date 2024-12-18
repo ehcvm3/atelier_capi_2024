@@ -60,7 +60,7 @@ jobs:
         shell: Rscript {0}
 
       - name: Install R packages need to build site
-        run: pak::pak(c("glue", "htmltools", "here", "gt", "purrr", "tibble", "fs", "dplyr", "knitr", "fontawesome", "emoji", "quarto"))
+        run: pak::pak(c("glue", "htmltools", "here", "gt", "purrr", "tibble", "fs", "dplyr", "knitr", "fontawesome", "emoji", "quarto", "readr", "reactable"))
         shell: Rscript {0}
 
       # - name: Install R packages need to build site
